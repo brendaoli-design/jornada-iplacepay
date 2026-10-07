@@ -52,26 +52,28 @@
     .steps { width: 100%; margin-top: 40px; display: flex; flex-direction: column; gap: 40px; font-family: var(--display); }
     .steps-h { display: flex; flex-direction: column; gap: 16px; }
     .steps-h h3 { font-size: 24px; font-weight: 700; color: #1d1d1f; line-height: normal; }
-    .steps-h p { font-size: 13.5px; color: var(--gray3); margin-top: 2px; }
-    .tabs { display: flex; gap: 8px; height: 44px; }
-    .tab { flex: 1; min-width: 130px; height: 44px; display: flex; align-items: center; gap: 9px; padding: 0 13px; border: 1px solid #e5e5ea; border-radius: 10px; background: #fff; font-family: inherit; font-size: 12.5px; color: var(--gray3); text-align: left; cursor: default; }
+    .steps-h p { font-size: 15px; color: var(--gray3); margin-top: 2px; }
+    .tabs { display: flex; gap: 8px; height: 50px; }
+    .tab { flex: 1; min-width: 130px; height: 50px; display: flex; align-items: center; gap: 9px; padding: 0 14px; border: 1px solid #e5e5ea; border-radius: 10px; background: #fff; font-family: inherit; font-size: 14px; color: var(--gray3); text-align: left; cursor: default; }
     .tab .n { width: 20px; height: 20px; border-radius: 10px; background: #e8e8ed; color: var(--gray3); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
     .tab.reach { cursor: pointer; }
     .tab.on { border-color: var(--blue); color: #000; font-weight: 700; }
     .tab.on .n { background: var(--blue); color: #fff; }
+    .tab .n.ok { background: #008900; position: relative; }
+    .tab .n.ok::after { content: ""; position: absolute; left: 7px; top: 3.5px; width: 4px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
 
     .panel { display: none; background: #fff; border: 1px solid rgba(183, 183, 183, .2); border-radius: 14px; padding: 20px 24px 24px; flex-direction: column; gap: 16px; }
     .panel.on { display: flex; }
     .panel.p1 { border-color: var(--blue); }
     .ph { display: flex; align-items: center; gap: 14px; }
-    .ph .n { width: 28px; height: 28px; border-radius: 14px; background: var(--blue); color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-    .ph b { font-size: 16px; color: #1d1d1f; }
+    .ph .n { width: 32px; height: 32px; border-radius: 16px; background: var(--blue); color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .ph b { font-size: 20px; color: #1d1d1f; }
     .lock-note { display: none; background: #f2f2f4; border-radius: 8px; padding: 10px 14px; font-size: 12.5px; line-height: 18px; color: var(--gray3); }
     .panel.locked .lock-note { display: block; }
     .panel.locked .auth, .panel.locked .doc, .panel.locked .btn, .panel.locked .inp, .panel.locked .save, .panel.locked .parc { pointer-events: none; }
     .panel.locked .btn { background: rgba(0, 0, 0, .1); color: rgba(0, 0, 0, .4); }
     .panel.locked .doc .a { color: var(--gray3); }
-    .txt { font-size: 14px; line-height: 22.4px; color: #3a3a3c; }
+    .txt { font-size: 15px; line-height: 24px; color: #3a3a3c; }
     .txt b { font-weight: 700; }
     .col { display: flex; flex-direction: column; gap: 12px; }
 
@@ -82,7 +84,7 @@
     .auth.on .cb::after { content: ""; position: absolute; left: 5px; top: 1px; width: 5px; height: 10px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
     .auth span.t { font-size: 13px; line-height: 19.5px; color: #3a3a3c; }
 
-    .btn { display: flex; align-items: center; justify-content: center; width: 100%; padding: 15px 15px 16px; border-radius: 8px; border: 0; font-family: inherit; font-size: 15.5px; font-weight: 700; background: rgba(0, 0, 0, .1); color: rgba(0, 0, 0, .4); pointer-events: none; }
+    .btn { display: flex; align-items: center; justify-content: center; width: 100%; padding: 15px 15px 16px; border-radius: 8px; border: 0; font-family: inherit; font-size: 16px; font-weight: 700; background: rgba(0, 0, 0, .1); color: rgba(0, 0, 0, .4); pointer-events: none; }
     .btn.r12 { border-radius: 12px; }
     .btn.ready { background: var(--blue); color: #fff; pointer-events: auto; }
     .btn.ready:hover { background: var(--blueh); }
@@ -90,15 +92,15 @@
     .hs { display: flex; align-items: center; gap: 14px; background: #f2f2f4; border-radius: 8px; padding: 24px 16px; }
     .hs .lg { background: #fff; border: 1px solid #e5e5ea; border-radius: 8px; padding: 8px; flex: 0 0 auto; }
     .hs .lg img { width: 105px; height: 36.2px; object-fit: contain; }
-    .hs p { flex: 1; font-size: 14px; line-height: 1.3; color: #3a3a3c; }
+    .hs p { flex: 1; font-size: 15px; line-height: 1.3; color: #3a3a3c; }
     .hs p b { color: #1d1d1f; }
     .docs { display: flex; flex-direction: column; gap: 8px; }
     .doc { display: flex; align-items: center; justify-content: space-between; padding: 13px 15px; border: 1px solid #e5e5ea; border-radius: 8px; background: #fff; width: 100%; text-align: left; font-family: inherit; cursor: pointer; }
-    .doc .t b { display: block; font-size: 13.5px; color: #1d1d1f; }
-    .doc .t span { display: block; font-size: 12px; color: var(--gray3); padding-top: 2px; }
-    .doc .a { font-size: 13px; font-weight: 700; color: var(--blue); white-space: nowrap; }
+    .doc .t b { display: block; font-size: 15px; color: #1d1d1f; }
+    .doc .t span { display: block; font-size: 13px; color: var(--gray3); padding-top: 2px; }
+    .doc .a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: var(--blue); white-space: nowrap; }
     .doc.ok { background: rgba(0, 113, 227, .05); border-color: #fff; cursor: default; }
-    .note { background: #f2f2f4; border-radius: 8px; padding: 12px 14px; text-align: center; font-size: 13px; line-height: 19.5px; color: #3a3a3c; }
+    .note { background: #f2f2f4; border-radius: 8px; padding: 12px 14px; text-align: center; font-size: 14px; line-height: 21px; color: #3a3a3c; }
     .note b { font-weight: 700; }
 
     .val { background: rgba(0, 113, 227, .05); border: 1px solid #fff; border-radius: 10px; padding: 16px; }
@@ -106,22 +108,28 @@
     .val span { display: block; font-size: 13px; line-height: 19.5px; color: var(--gray3); }
 
     /* etapa 3 */
-    .vbox { display: block; width: 100%; text-align: left; font-family: inherit; background: #fff; border: 1px solid #e5e5ea; border-radius: 10px; padding: 16px; }
-    .vbox > b { display: block; font-size: 14px; color: #1d1d1f; }
-    .vbox > span { display: block; font-size: 13px; line-height: 19.5px; color: var(--gray3); margin-top: 0; }
-    .vbox > span.b14 { font-size: 14px; margin-top: 4px; }
+    .vbox { display: block; width: 100%; text-align: left; font-family: inherit; background: #fff; border: 1px solid #e5e5ea; border-radius: 12px; padding: 28px; }
+    #s3body { gap: 20px; }
+    .vbox .vh { display: flex; align-items: center; gap: 10px; }
+    .vbox .vh b { flex: 1; font-size: 17px; line-height: 24px; font-weight: 700; color: #1d1d1f; }
+    .vbox .vh .chk { width: 24px; height: 24px; }
+    .vbox .vh .chk::after { left: 8.5px; top: 4px; width: 5px; height: 10px; }
+    .vbox .chip { flex: 0 0 auto; font-size: 13px; line-height: 18px; font-weight: 600; padding: 4px 12px; border-radius: 999px; background: #e8e8ed; color: #424245; white-space: nowrap; }
+    .vbox > .d { display: block; font-size: 14px; line-height: 21px; color: #515154; margin-top: 8px; }
+    .vbox.act { border: 1.5px solid #1d1d1f; padding: 27.5px; }
     .vbox.done { background: rgba(0, 113, 227, .05); border-color: #fff; }
+    .vbox.done .vh b { color: #1d1d1f; }
     .vbox.click { cursor: pointer; }
-    .vbox.locked { opacity: .5; }
-    .vbox.locked b i { font-style: normal; font-weight: 400; font-size: 12px; color: #aeaeb2; margin-left: 8px; }
-    .canais { display: flex; gap: 16px; padding: 8px 0; flex-wrap: wrap; }
-    .canal { display: flex; align-items: center; gap: 8px; padding: 16px; background: #fff; border: 1px solid #fff; border-radius: 8px; box-shadow: 2px 2px 8px rgba(0, 0, 0, .08); font-family: inherit; font-size: 14px; line-height: 19.5px; color: #000; }
-    .canal img { width: 18px; height: 18px; }
-    .canal.sel { border: 2px solid var(--blue); padding: 15px; color: var(--blue); }
-    .codigo { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
-    .codigo h4 { font-size: 24px; font-weight: 700; color: #1d1d1f; margin-bottom: -12px; }
-    .codigo p { font-size: 14px; line-height: 19.5px; color: rgba(0, 0, 0, .8); }
-    .cod-in { width: 213px; padding: 8px 32px; border: 1px solid #696969; border-radius: 8px; font-family: inherit; font-size: 24px; font-weight: 700; color: #000; background: #fff; }
+    .vbox.locked { opacity: .55; background: #fafafb; }
+    .vbox.locked .chip { background: #ececf0; color: #6e6e73; }
+    .canais { display: flex; gap: 16px; padding: 24px 0 4px; flex-wrap: wrap; }
+    .canal { display: flex; align-items: center; gap: 10px; padding: 16px 22px; background: #fff; border: 1px solid #fff; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, .1); font-family: inherit; font-size: 15px; line-height: 20px; color: #000; cursor: pointer; }
+    .canal img { width: 20px; height: 20px; }
+    .canal.sel { border: 2px solid var(--blue); padding: 15px 21px; color: var(--blue); }
+    .codigo { margin-top: 28px; padding-top: 28px; border-top: 1px solid #e5e5ea; display: flex; flex-direction: column; gap: 16px; }
+    .codigo h4 { font-size: 16px; line-height: 22px; font-weight: 700; color: #1d1d1f; }
+    .codigo p { font-size: 14px; line-height: 21px; color: #515154; }
+    .cod-in { width: 264px; padding: 10px 24px; border: 1.5px solid var(--blue); border-radius: 10px; font-family: inherit; font-size: 30px; line-height: 38px; font-weight: 700; letter-spacing: 1px; color: #000; background: #fff; text-align: center; }
     .cod-in::placeholder { color: #000; }
     .lnk { align-self: flex-start; background: none; border: 0; padding: 0; font-family: inherit; font-size: 14px; font-weight: 700; line-height: 19.5px; color: rgba(0, 0, 0, .8); text-decoration: underline; }
     .lnk2 { text-decoration: underline; }
@@ -130,19 +138,19 @@
     .bio-c { width: 150px; height: 150px; border-radius: 75px; background: #efefef; border: 1px solid var(--blue); display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
     .bio-c img { width: 54px; height: 54px; }
     .bio-t { display: flex; flex-direction: column; gap: 8px; width: 394px; max-width: 100%; }
-    .bio-t em { font-style: normal; font-weight: 700; font-size: 12.5px; color: var(--gray3); }
+    .bio-t em { font-style: normal; font-weight: 700; font-size: 14px; color: #1d1d1f; }
     .bio-i { display: flex; gap: 16px; align-items: center; margin-top: 16px; }
     .bio-i .ic { width: 30px; height: 30px; border-radius: 15px; background: rgba(0, 113, 227, .1); display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
     .bio-i img { flex: 0 0 auto; }
     .bio-i > img { width: 30px; height: 30px; }
     .bio-i .ic img { width: 17px; height: 17px; }
-    .bio-i p { font-size: 13px; line-height: 19.5px; color: #3a3a3c; }
+    .bio-i p { font-size: 14.5px; line-height: 21px; color: #3a3a3c; }
     .bio-i p b { color: #1d1d1f; }
-    .bio-go { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid var(--blue); background: rgba(0, 113, 227, .05); color: var(--blue); font-family: inherit; font-size: 15px; font-weight: 700; }
+    .bio-go { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid var(--blue); background: rgba(0, 113, 227, .05); color: var(--blue); font-family: inherit; font-size: 16px; font-weight: 700; }
     .bio-go:hover { background: rgba(0, 113, 227, .1); }
     .panel.locked .vbox, .panel.locked .canal, .panel.locked .bio-go { pointer-events: none; }
     .cod-in:disabled { background: #fafafb; }
-    .stat { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: #1d1d1f; min-height: 19.5px; }
+    .stat { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; color: #1d1d1f; min-height: 19.5px; }
     .stat.ok { color: #008900; }
     .spin { width: 18px; height: 18px; border-radius: 50%; border: 2.5px solid rgba(0, 113, 227, .2); border-top-color: var(--blue); animation: giro .8s linear infinite; flex: 0 0 auto; }
     .spin.w { border-color: rgba(255, 255, 255, .25); border-top-color: #fff; display: none; }
@@ -177,7 +185,7 @@
     .cam-f { text-align: center; font-size: 13px; color: var(--gray3); padding: 20px 0 24px; }
 
     .f { display: flex; flex-direction: column; gap: 14px; }
-    .inp { width: 100%; height: 53px; border: 1px solid #d9d9de; border-radius: 8px; padding: 0 16px; font-family: var(--display); font-size: 15px; color: #1d1d1f; background: #fff; }
+    .inp { width: 100%; height: 53px; border: 1px solid #d9d9de; border-radius: 8px; padding: 0 16px; font-family: var(--display); font-size: 16px; color: #1d1d1f; background: #fff; }
     .inp::placeholder { color: var(--gray3); }
     .sel { appearance: none; -webkit-appearance: none; background: #fff; color: var(--gray3); }
     .sel.sel-on { color: #1d1d1f; }
@@ -261,10 +269,18 @@
     .warn i { font-style: normal; color: #d6232a; font-size: 15px; line-height: 18px; }
     .warn.show { display: flex; }
 
-    .qr { position: relative; width: 433px; height: 636px; background: #fff; border-radius: 24px; overflow: hidden; }
-    .qr .img { position: absolute; left: 50%; top: 50%; width: 397px; height: 610px; transform: translate(-50%, -50%); }
-    .qr .go { position: absolute; left: 110px; right: 110px; top: 552px; height: 32px; background: none; border: 0; }
+    .qr { position: relative; width: 433px; max-width: 100%; height: 636px; background: #fff; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: 78px 40px 0; font-family: var(--display); }
     .qr .closeb { top: 20px; right: 20px; }
+    .qr-ico { margin-bottom: 28px; }
+    .qr-t { font-size: 24px; line-height: 30px; font-weight: 500; color: #333; margin-bottom: 12px; text-align: center; }
+    .qr-s { font-size: 18px; line-height: 26px; color: #6e6e73; text-align: center; max-width: 340px; margin-bottom: 32px; }
+    .qr-box { width: 220px; height: 220px; padding: 14px; border: 2px solid #1d1d1f; border-radius: 10px; background: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, .18); }
+    .qr-box svg { display: block; width: 100%; height: 100%; }
+    .qr-go { margin-top: 44px; background: none; border: 0; padding: 0; font-family: inherit; font-size: 18px; line-height: 24px; color: var(--blue); text-decoration: underline; }
+    .qr-go:hover { color: var(--blueh); }
+    .qr-f { position: absolute; left: 24px; right: 24px; bottom: 22px; display: flex; align-items: center; justify-content: space-between; }
+    .qr-f .seg { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #1d1d1f; }
+    .qr-f .unico { font-size: 22px; font-weight: 600; letter-spacing: -.5px; color: #4a4a4a; }
   </style>
 </head>
 
@@ -433,9 +449,13 @@
   <!-- MODAL QR code biometria -->
   <div class="overlay" id="mQr">
     <div class="qr">
-      <img class="img" src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-modal-qr.png" alt="Verificação de identidade: aponte a câmera do celular para o QR Code">
-      <button class="go" type="button" onclick="validou()" aria-label="Continuar neste dispositivo"></button>
       <button class="closeb" onclick="closeModal('mQr')" aria-label="Fechar"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-fechar-qr.svg" alt=""></button>
+      <svg class="qr-ico" width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#1d1d1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18V10a6 6 0 0 1 6-6h8M38 4h8a6 6 0 0 1 6 6v8M52 38v8a6 6 0 0 1-6 6h-8M18 52h-8a6 6 0 0 1-6-6v-8"/><path d="M20 20v6M36 20v6M28 22v10h-3M20 38c2.4 3 5.2 4.5 8 4.5s5.6-1.5 8-4.5"/></svg>
+      <h3 class="qr-t">Verificação de identidade</h3>
+      <p class="qr-s">Aponte a câmera do seu celular para o QR Code e clique para abrir o site.</p>
+      <div class="qr-box"><svg id="qrSvg" viewBox="0 0 29 29" shape-rendering="crispEdges" aria-label="QR Code ilustrativo"></svg></div>
+      <button class="qr-go" type="button" onclick="validou()">Continuar neste dispositivo</button>
+      <div class="qr-f"><span class="seg"><svg width="12" height="14" viewBox="0 0 12 14" fill="#1d1d1f" aria-hidden="true"><path d="M6 0a3.5 3.5 0 0 0-3.5 3.5V5H1.8C1.4 5 1 5.4 1 5.8v7.4c0 .4.4.8.8.8h8.4c.4 0 .8-.4.8-.8V5.8c0-.4-.4-.8-.8-.8H9.5V3.5A3.5 3.5 0 0 0 6 0zm0 1.6c1 0 1.9.8 1.9 1.9V5H4.1V3.5C4.1 2.4 5 1.6 6 1.6z"/></svg>Ambiente seguro</span><span class="unico">unico</span></div>
     </div>
   </div>
 
@@ -497,7 +517,7 @@
     function renderTabs() {
       document.getElementById('tabs').innerHTML = NOMES.map(function (n, i) {
         var k = i + 1;
-        return '<button class="tab reach' + (k === view ? ' on' : '') + '" data-t="' + k + '" type="button"><span class="n">' + k + '</span>' + n + '</button>';
+        return '<button class="tab reach' + (k === view ? ' on' : '') + '" data-t="' + k + '" type="button"><span class="n' + (k < reached ? ' ok' : '') + '">' + (k < reached ? '' : k) + '</span>' + n + '</button>';
       }).join('');
       document.getElementById('stepsH').className = 'steps-h' + (view === 2 ? ' sm' : '');
       document.querySelectorAll('.panel').forEach(function (p) {
@@ -549,9 +569,9 @@
 
       // 1. código de verificação
       if (S3.codeOk) {
-        h += '<div class="vbox done"><b>1. Código de verificação por SMS ou WhatsApp - Verificado.</b></div>';
+        h += '<div class="vbox done"><div class="vh"><span class="chk"></span><b>1. Código de verificação por SMS ou WhatsApp - Concluído</b></div></div>';
       } else {
-        h += '<div class="vbox"><b>1. Código de verificação - Selecione o canal de envio do código</b><span>Vamos enviar um token de verificação por SMS ou WhatsApp para garantir a segurança da sua assinatura.</span>' +
+        h += '<div class="vbox act"><div class="vh"><b>1. Código de verificação - Selecione o canal de envio do código</b><span class="chip">Em andamento</span></div><span class="d">Vamos enviar um token de verificação por SMS ou WhatsApp para garantir a segurança da sua assinatura.</span>' +
           '<div class="canais"><button class="canal' + (S3.canal === 'sms' ? ' sel' : '') + '" data-canal="sms" type="button"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-sms.svg" alt="">Enviar via SMS</button>' +
           '<button class="canal' + (S3.canal === 'wpp' ? ' sel' : '') + '" data-canal="wpp" type="button"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-' + (S3.canal === 'wpp' ? 'whatsapp-azul' : 'whatsapp') + '.svg" alt="">Enviar via WhatsApp</button></div>';
         if (S3.canal) {
@@ -567,9 +587,9 @@
 
       // 2. biometria
       if (!S3.codeOk) {
-        h += '<div class="vbox locked"><b>2. Biometria facial <i>🔒 disponível após o código</i></b><span>Uma foto do seu rosto confirma a assinatura dos contratos. Leva alguns segundos e é usada apenas para validar esta compra.</span></div>';
+        h += '<div class="vbox locked"><div class="vh"><b>2. Biometria facial</b><span class="chip">🔒 Disponível após o código</span></div><span class="d">Uma foto do seu rosto confirma a assinatura dos contratos. Leva alguns segundos e é usada apenas para validar esta compra.</span></div>';
       } else if (S3.bioOpen && !S3.bioDone) {
-        h += '<div class="vbox bio"><b>2. Biometria facial</b><span class="b14">Uma foto do seu rosto confirma a assinatura dos contratos. Leva alguns segundos e é usada apenas para validar esta compra.</span>' +
+        h += '<div class="vbox bio act"><div class="vh"><b>2. Biometria facial</b><span class="chip">Em andamento</span></div><span class="d">Uma foto do seu rosto confirma a assinatura dos contratos. Leva alguns segundos e é usada apenas para validar esta compra.</span>' +
           '<div class="bio-row"><div class="bio-c"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-bio-rosto.svg" alt=""></div>' +
           '<div class="bio-t"><em>Antes de começar, siga estas orientações:</em>' +
           '<div class="bio-i"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-bio-luz.svg" alt=""><p><b>Prefira luz natural.</b> Evite luz forte atrás de você, como janelas.</p></div>' +
@@ -577,10 +597,11 @@
           '<div class="bio-i"><span class="ic"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-bio-camera.svg" alt=""></span><p><b>Fique parado durante a captura.</b> Aguarde a confirmação antes de se mover.</p></div></div></div>' +
           '<button class="bio-go" type="button" data-act="bio-go">Iniciar biometria facial</button></div>';
       } else {
-        h += '<button class="vbox ' + (S3.bioDone ? 'done' : 'click') + '" type="button" data-act="bio-open"><b>' + (S3.bioDone ? '2. Biometria facial concluída' : '2. Biometria facial') + '</b><span>' +
+        h += '<button class="vbox ' + (S3.bioDone ? 'done' : 'click act') + '" type="button" data-act="bio-open"><div class="vh">' + (S3.bioDone ? '<span class="chk"></span>' : '') +
+          '<b>' + (S3.bioDone ? '2. Biometria facial - Concluído' : '2. Biometria facial') + '</b>' + (S3.bioDone ? '' : '<span class="chip">Clique para começar</span>') + '</div><span class="d">' +
           (S3.bioDone ? 'Uma foto do seu rosto confirma a assinatura dos contratos, e é usada apenas para validar esta compra.' : 'Uma foto do seu rosto confirma a assinatura dos contratos. Leva alguns segundos e é usada apenas para validar esta compra.') + '</span></button>';
       }
-      h += '<button class="btn r12' + (S3.bioDone ? ' ready' : '') + '" type="button" data-act="s3-next">Continuar para dados do cartão</button>';
+      h += '<button class="btn r12' + (S3.bioDone ? ' ready' : '') + '" type="button" data-act="s3-next">Informar dados do cartão</button>';
       document.getElementById('s3body').innerHTML = h;
       var ci = document.getElementById('codIn');
       if (ci) { ci.focus(); ci.setSelectionRange(ci.value.length, ci.value.length); }
@@ -656,6 +677,26 @@
     function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow = 'hidden'; }
     function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow = ''; }
     document.querySelectorAll('.overlay').forEach(function (o) { o.addEventListener('click', function (e) { if (e.target === o && o.id !== 'mCam' && o.id !== 'mProc') closeModal(o.id); }); });
+
+    // QR code ilustrativo (padrão de módulos gerado no código, sem imagem)
+    (function drawQR() {
+      var N = 29, m = [], s = 20260710;
+      function rnd() { s |= 0; s = s + 0x6D2B79F5 | 0; var t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }
+      for (var y = 0; y < N; y++) { m[y] = []; for (var x = 0; x < N; x++) m[y][x] = rnd() > 0.52 ? 1 : 0; }
+      function finder(ox, oy) {
+        for (var j = -1; j <= 7; j++) for (var i = -1; i <= 7; i++) {
+          var X = ox + i, Y = oy + j; if (X < 0 || Y < 0 || X >= N || Y >= N) continue;
+          var on = (i >= 0 && i <= 6 && j >= 0 && j <= 6) && (i === 0 || i === 6 || j === 0 || j === 6 || (i >= 2 && i <= 4 && j >= 2 && j <= 4));
+          m[Y][X] = on ? 1 : 0;
+        }
+      }
+      finder(0, 0); finder(N - 7, 0); finder(0, N - 7);
+      for (var k = 8; k < N - 8; k++) { m[6][k] = k % 2 === 0 ? 1 : 0; m[k][6] = k % 2 === 0 ? 1 : 0; }
+      for (var j = 0; j < 5; j++) for (var i = 0; i < 5; i++) m[20 + j][20 + i] = (i === 0 || i === 4 || j === 0 || j === 4 || (i === 2 && j === 2)) ? 1 : 0;
+      var r = '';
+      for (var y2 = 0; y2 < N; y2++) for (var x2 = 0; x2 < N; x2++) if (m[y2][x2]) r += '<rect x="' + x2 + '" y="' + y2 + '" width="1" height="1"/>';
+      document.getElementById('qrSvg').innerHTML = '<g fill="#111">' + r + '</g>';
+    })();
 
     renderTabs(); renderDocs(); renderS3();
   </script>

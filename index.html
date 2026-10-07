@@ -297,128 +297,31 @@
       margin-top: 10px;
     }
 
-    /* bloco alternável */
-    .fin {
-      border: 1px solid var(--gray4);
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 20px 0;
-    }
-
-    .fin-tabs {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--gray5);
-      margin-bottom: 16px;
-    }
-
-    .fin-tab {
-      font-size: 14px;
-      color: var(--gray3);
-      padding: 0 0 12px;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
-    }
-
-    .fin-tab.on {
-      color: var(--ink);
-      font-weight: 600;
-      border-bottom-color: var(--ink);
-    }
-
-    .fin-pane {
-      display: none;
-    }
-
-    .fin-pane.on {
-      display: block;
-    }
-
-    .fin-inst {
-      font-size: 15px;
-      margin-bottom: 10px;
-    }
-
-    .fin-inst b {
-      font-weight: 700;
-    }
-
-    .fin-inst .final {
-      color: var(--gray3);
-      font-weight: 400;
-    }
-
-    .fin-pre {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .fin-pre b {
-      color: var(--green);
-      font-weight: 700;
-    }
-
-    .fin-desc {
-      font-size: 14px;
-      color: var(--gray2);
-      line-height: 1.5;
-      margin-bottom: 14px;
-    }
-
-    .fin-seg {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .fin-seg svg {
-      flex: 0 0 auto;
-    }
-
-    .fin-excl {
-      font-size: 12.5px;
-      color: var(--gray3);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .fin-excl img {
-      height: 18px;
-      width: auto;
-    }
-
-    .fin-bancos {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .fin-bancos img {
-      height: 22px;
-      width: auto;
-    }
-
-    .fin-links {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .fin-link {
-      color: var(--blue);
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-    }
+    /* bloco de financiamento (frames "bloco financiamento" 65:4667 e "valor pre aprovado" 65:4798) */
+    .fin { background: #fff; border: 1px solid #e3e3e3; border-radius: 8px; padding: 16px; margin: 20px 0; display: flex; flex-direction: column; gap: 16px; font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif; }
+    .fin-tabs { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(0, 0, 0, .16); }
+    .fin-tab { padding: 0 4px 4px; font-weight: 600; font-size: 12px; line-height: 20px; letter-spacing: .24px; color: #6e6e73; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1px; white-space: nowrap; }
+    .fin-tab:last-child { font-size: 12.563px; letter-spacing: .2513px; }
+    .fin-tab.on { color: #000; border-bottom-color: #6e6e73; }
+    .fin-pane { display: none; flex-direction: column; gap: 16px; }
+    .fin-pane.fin-ass { gap: 8px; }
+    .fin-pane.on { display: flex; }
+    .fin-inst, .fin-pre { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .fin-inst .u, .fin-inst .final, .fin-pre .u { font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: .28px; color: #474747; }
+    .fin-inst b { font-weight: 600; font-size: 18px; line-height: 20px; letter-spacing: .36px; color: #000; }
+    .fin-pre b { font-weight: 700; font-size: 18px; line-height: 1.2; letter-spacing: .36px; color: #009316; }
+    .fin-desc { font-weight: 400; font-size: 14px; line-height: 1.2; letter-spacing: .28px; color: rgba(0, 0, 0, .8); }
+    .fin-seg { display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 14px; line-height: 1.2; letter-spacing: .28px; color: rgba(0, 0, 0, .8); }
+    .fin-seg img { flex: 0 0 auto; display: block; }
+    .fin-excl { display: flex; align-items: flex-end; justify-content: space-between; font-weight: 400; font-size: 12px; line-height: 1.2; letter-spacing: .24px; color: rgba(0, 0, 0, .8); }
+    .fin-excl img { display: block; }
+    .fin-bancos { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; font-weight: 400; font-size: 12px; line-height: 1.2; color: rgba(0, 0, 0, .7); }
+    .fin-bancos img { display: block; }
+    .fin-links { display: flex; justify-content: space-between; }
+    .fin-link { color: var(--blue); font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif; font-weight: 600; font-size: 14px; line-height: 16px; cursor: pointer; display: inline-flex; align-items: center; }
+    .fin-link i { width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; }
+    .fin-link i img { width: 6px; height: 10.32px; transform: rotate(180deg); display: block; }
+    .fin-pane.fin-ass .fin-links { margin-top: 8px; }
 
     .sec {
       margin-bottom: 28px;
@@ -596,90 +499,26 @@
       cursor: pointer;
     }
 
-    /* buyback (fiel) */
-    .buyback {
-      margin-bottom: 24px;
-    }
+    /* buyback (mesmo bloco do carrinho) */
+    .pb { margin-bottom: 24px; }
+    .bb-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .bb-head b { font-size: 16px; font-weight: 600; }
+    .bb-desc { font-size: 14px; color: var(--gray3); line-height: 1.5; margin-bottom: 12px; }
+    .bb-opts { display: flex; gap: 12px; margin-bottom: 14px; }
+    .bb-opt { flex: 1; border: 1px solid var(--gray4); border-radius: 12px; padding: 14px; font-size: 14px; font-weight: 600; text-align: center; cursor: pointer; }
+    .bb-opt.on { border-color: var(--blue); border-width: 1.5px; color: var(--ink); }
 
-    .bb-head {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
 
-    .bb-head b {
-      font-size: 16px;
-      font-weight: 600;
-    }
+    .pb-card { position: relative; width: 100%; max-width: 396px; height: 81px; background: #F8F8F8; border: 0; border-radius: 12px; overflow: hidden; text-align: left; display: block; cursor: pointer; font-family: inherit; }
+    .pb-card .ph { position: absolute; left: 0; top: 0; width: 120px; height: 81px; object-fit: cover; }
+    .pb-card .tx { position: absolute; left: 137px; right: 30px; top: 50%; transform: translateY(-50%); color: rgba(0, 0, 0, .8); }
+    .pb-card .tx b { display: block; font-family: var(--display); font-size: 12.563px; line-height: 20.9px; letter-spacing: .25px; font-weight: 600; margin-bottom: 4px; }
+    .pb-card .tx i { display: block; font-style: normal; font-family: var(--display); font-size: 12px; line-height: 1.2; }
+    .pb-card .ar { position: absolute; right: 15px; top: 12px; width: 14px; height: 14px; }
 
-    .bb-desc {
-      font-size: 14px;
-      color: var(--gray3);
-      line-height: 1.5;
-      margin-bottom: 12px;
-    }
 
-    .bb-opts {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
 
-    .bb-opt {
-      flex: 1;
-      border: 1px solid var(--gray4);
-      border-radius: 12px;
-      padding: 14px;
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
-      cursor: pointer;
-    }
 
-    .bb-opt.on {
-      border-color: var(--blue);
-      border-width: 1.5px;
-      color: var(--ink);
-    }
-
-    .bb-info {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      background: var(--gray5);
-      border-radius: 12px;
-      padding: 12px;
-      position: relative;
-    }
-
-    .bb-info img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 8px;
-      flex: 0 0 auto;
-    }
-
-    .bb-info .t {
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .bb-info .d {
-      font-size: 13px;
-      color: var(--gray3);
-      margin-top: 2px;
-    }
-
-    .bb-info .plus {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      color: var(--gray3);
-      font-size: 18px;
-    }
 
     .qty {
       margin-bottom: 24px;
@@ -882,332 +721,207 @@
     .closex { position:absolute; top:20px; right:20px; width:36px; height:36px; border-radius:50%; background:#EDEDF0; border:0; cursor:pointer; z-index:10; display:flex; align-items:center; justify-content:center; }
   .modal-scroll { overflow-y:auto; -webkit-overflow-scrolling:touch; flex:1; min-height:0; }
 
-    .mh-topo-wrap {
-      position: relative;
-    }
-
-    .mh-head {
-      text-align: center;
-      padding: 40px 40px 0;
-    }
-
-    .mh-eye { font-family:var(--display); font-weight:600; font-size:19.5px; line-height:1.11; margin-bottom:8px; }
-
-    .mh-title { font-family:var(--display); font-size:36.6px; line-height:1.11; font-weight:600; max-width:532px; margin:0 auto; }
-
-    .mh-img {
-      width: 100%;
-      display: block;
-    }
-
-    .mh-sub { font-family:var(--display); font-size:26px; line-height:1.34; font-weight:600; text-align:center; max-width:613px; margin:0 auto; padding:0 40px; color:#1b1b1b; }
-
-    .m-video {
-      padding: 32px 40px 0;
-    }
-
-    .m-video img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
-
-    .bento {
-      padding: 24px 40px 0;
-      display: grid;
-      grid-template-columns: 297.69px 1fr 1fr;
-      gap: 16px;
-    }
-
-    .bento-cell { background:#f5f5f5; border-radius:19.9px; padding:24px; }
-
-    .bento-a {
-      grid-row: span 2;
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .bento-a .carousel {
-      position: relative;
-      width: 100%;
-    }
-
-    .bento-a .carousel img {
-      width: 100%;
-      height: auto;
-      display: block;
-      opacity: 0;
-      transition: opacity .5s;
-    }
-
-    .bento-a .carousel img:first-child {
-      position: relative;
-    }
 
-    .bento-a .carousel img:not(:first-child) {
-      position: absolute;
-      inset: 0;
-    }
-
-    .bento-a .carousel img.on {
-      opacity: 1;
-    }
-
-    .bento-b {
-      text-align: center;
-    }
-
-    .bento-b .t { font-family:var(--display); font-size:21.56px; font-weight:600; line-height:1.2; margin-bottom:16px; }
-
-    .prog-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 14px 16px;
-      text-align: left;
-    }
-
-    .prog-card .pl { font-family:var(--display); font-size:9.6px; color:#797979; font-weight:500; letter-spacing:-0.1px; }
-
-    .prog-card .pn { font-family:var(--display); font-size:13.2px; font-weight:600; color:#000; margin-bottom:10px; letter-spacing:-0.13px; }
-
-    .prog-bar {
-      height: 14px;
-      border-radius: 999px;
-      background: var(--gray4);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .prog-bar i { position:absolute; left:0; top:0; bottom:0; width:70%; background:#c6d30d; border-radius:24.6px; }
-
-    .prog-scale { display:flex; justify-content:space-between; font-family:var(--display); font-size:9.6px; color:#777; font-weight:600; margin-top:5px; }
-
-    .bento-c {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .pill-final { display:inline-block; background:linear-gradient(90deg,#c6d30d,rgba(198,211,13,0)); color:#000; font-family:var(--display); font-size:15.4px; font-weight:600; letter-spacing:-0.77px; padding:7px 22px; border-radius:66px; margin-bottom:14px; }
-
-    .bento-c .big { font-family:var(--display); font-size:26.5px; font-weight:600; line-height:1.15; }
-
-    .bento-c .sm { font-size:13.27px; color:#000; font-weight:400; margin-top:12px; }
-
-    .bento-d {
-      grid-column: span 2;
-      text-align: center;
-      padding: 24px 0 0;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .bento-d .t { font-family:var(--display); font-size:19.9px; font-weight:700; margin-bottom:2px; }
-
-    .bento-d .s { font-size:13.27px; color:#000; line-height:1.16; font-weight:400; margin-bottom:14px; }
-
-    .bento-d img {
-      width: 100%;
-      display: block;
-      margin-top: auto;
-    }
-
-    .como {
-      text-align: center;
-      padding: 44px 40px 0;
-    }
-
-    .como .eye { font-size:12.65px; letter-spacing:1.39px; color:#464646; font-weight:600; margin-bottom:10px; }
-
-    .como .t { font-family:var(--display); font-size:29.5px; font-weight:600; line-height:1.2; max-width:462px; margin:0 auto; }
-
-    .etapas {
-      padding: 28px 40px 44px;
-    }
-
-    .etapa-tag { display:inline-block; background:#c8d400; color:#000; font-family:var(--display); font-size:11.5px; font-weight:500; padding:6px 18px; border-radius:999px; position:relative; z-index:2; }
-
-    .et1-wrap {
-      text-align: center;
-    }
-
-    .et1-cards {
-      display: flex;
-      gap: 14px;
-      margin-top: -14px;
-    }
-
-    .et1-card { flex:1; border:1.8px solid #c6d30d; border-radius:19.72px; padding:28px 22px 24px; text-align:center; }
-
-    .et1-card .c-main { font-family:var(--display); font-size:19.72px; font-weight:600; line-height:1.2; }
-
-    .et1-card .c-sub { font-family:var(--display); font-size:16.3px; font-weight:300; letter-spacing:0.49px; color:rgba(0,0,0,0.8); margin-top:12px; text-transform:uppercase; }
-
-    .et2-wrap { border:1.8px solid #c6d30d; background:rgba(255,255,255,0.4); border-radius:19.72px; padding:0 24px 28px; margin-top:22px; text-align:center; }
-
-    .et2-tagwrap {
-      text-align: center;
-      transform: translateY(-14px);
-    }
-
-    .et2-title { font-family:var(--display); font-size:19.72px; font-weight:700; line-height:1.2; max-width:378px; margin:0 auto 22px; }
-
-    .et2-cards {
-      display: flex;
-      gap: 16px;
-    }
-
-    .et2-card { flex:1; background:#fff; border:1px solid #f6f6f6; border-radius:21px; padding:14px; text-align:center; box-shadow:0 0 4.25px rgba(0,0,0,0.06); display:flex; flex-direction:column; align-items:center; gap:8.75px; }
-
-    .et2-card img { width:44.6px; height:44.6px; margin:0 auto; }
-
-    .et2-card .ct { font-family:var(--display); font-size:17.5px; font-weight:600; letter-spacing:0.35px; }
-
-    .et2-card .cd { font-family:var(--display); font-size:12px; color:rgba(0,0,0,0.82); line-height:1.3; font-weight:400; }
-
-    .et2-note { font-family:var(--display); font-size:11.5px; color:#000; font-weight:500; line-height:1.4; max-width:390px; margin:18px auto 0; }
-
-    .cl-modal {
-      padding: 44px 48px 48px;
-    }
-
-    .cl-title {
-      font-family: var(--display);
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .cl-sub {
-      font-size: 16px;
-      color: var(--gray2);
-      line-height: 1.5;
-      max-width: 440px;
-    }
-
-    .cl-card {
-      border: 1.5px solid var(--lime);
-      border-radius: 16px;
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      overflow: hidden;
-      min-height: 340px;
-    }
-
-    .cl-left {
-      padding: 40px 34px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .cl-left h3 {
-      font-family: var(--display);
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.35;
-      margin-bottom: 20px;
-    }
-
-    .cl-accept {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      border: 1px solid var(--gray4);
-      border-radius: 10px;
-      padding: 14px 15px;
-      font-size: 12.5px;
-      color: var(--gray2);
-      line-height: 1.4;
-      margin-bottom: 20px;
-    }
-
-    .cl-accept input {
-      margin-top: 2px;
-      width: 18px;
-      height: 18px;
-      accent-color: var(--blue);
-      flex: 0 0 auto;
-    }
-
-    .cl-btn {
-      background: var(--blue);
-      color: #fff;
-      border: 0;
-      border-radius: 10px;
-      padding: 14px 24px;
-      font-size: 15px;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      align-self: flex-start;
-    }
-
-    .cl-btn:hover {
-      background: var(--blueh);
-    }
-
-    .cl-note {
-      font-size: 13px;
-      color: var(--gray3);
-      margin-top: 16px;
-    }
-
-    .cl-approved .big {
-      color: var(--green);
-      font-family: var(--display);
-      font-size: 26px;
-      font-weight: 700;
-      margin: 4px 0 16px;
-    }
-
-    .cl-approved p {
-      font-size: 15px;
-      line-height: 1.5;
-      margin-bottom: 12px;
-    }
-
-    .cl-right {
-      background: var(--gray5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .cl-right .ph {
-      width: 118%;
-      transform: translateY(16%);
-    }
-
-    @media(max-width:620px) {
-      .cl-card {
-        grid-template-columns: 1fr;
-      }
-
-      .cl-right {
-        display: none;
-      }
-
-      .bento {
-        grid-template-columns: 1fr;
-      }
-
-      .bento-a,
-      .bento-d {
-        grid-column: auto;
-        grid-row: auto;
-      }
-
-      .et1-cards,
-      .et2-cards {
-        flex-direction: column;
-      }
-    }
+    .modal-scroll { overflow-x: hidden; }
+
+    /* ===== MODAL "Saiba mais - iPlacePay" (medidas do Figma, frame 65:4932) ===== */
+    .ip { --d: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif; font-family: var(--d); color: #000; padding-bottom: 32px; }
+    .ip-head { height: 193px; padding-top: 73px; text-align: center; }
+    .ip-eye { font-weight: 600; font-size: 19.476px; line-height: 1.11; margin-bottom: 8px; }
+    .ip-title { font-weight: 600; font-size: 36.598px; line-height: 1.11; color: #1b1b1b; width: 531.83px; max-width: 100%; margin: 0 auto; }
+    .ip-top { display: block; width: 100%; }
+    .ip-sub { margin: 30px auto 0; width: 613px; max-width: 100%; text-align: center; font-weight: 600; font-size: 26px; line-height: 1.34; color: #1b1b1b; }
+    .ip-video { margin: 64px 0 0 34px; width: 829px; height: 466.31px; overflow: hidden; }
+    .ip-video img { width: 829px; height: 466.31px; display: block; }
+
+    .ip-bento { margin: 54.7px 0 0 34px; width: 829.2px; display: grid; grid-template-columns: 297.69px 516.61px; gap: 14.926px; }
+    .ip-cell { position: relative; background: #f5f5f5; border-radius: 19.901px; overflow: hidden; }
+    .ip-a { height: 505px; }
+    .ip-a .carousel { position: relative; width: 100%; height: 100%; }
+    .ip-a .carousel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s; }
+    .ip-a .carousel img.on { opacity: 1; }
+    .ip-right { display: flex; flex-direction: column; gap: 14.926px; }
+    .ip-row { display: flex; gap: 14.926px; }
+    .ip-b { width: 252.91px; height: 245.04px; }
+    .ip-c { width: 248.77px; height: 245.04px; }
+    .ip-d { width: 516.61px; height: 245.04px; }
+
+    .ip-b .t { position: absolute; left: 26.54px; top: 25.71px; width: 199.84px; text-align: center; font-weight: 600; font-size: 21.56px; line-height: 1.2; }
+    .ip-prog { position: absolute; left: 15.76px; top: 123.55px; width: 219px; height: 96.26px; background: #fdfdfd; border: .6px solid #fff; border-radius: 9.626px; }
+    .ip-prog .pl { position: absolute; left: 10.8px; top: 6.4px; font-weight: 500; font-size: 9.626px; line-height: normal; color: #797979; letter-spacing: -.0963px; white-space: nowrap; }
+    .ip-prog .pn { position: absolute; left: 10.8px; top: 19.9px; font-weight: 600; font-size: 13.236px; line-height: normal; color: #000; letter-spacing: -.1324px; white-space: nowrap; }
+    .ip-prog .trk { position: absolute; left: 10.2px; top: 54.15px; width: 198.54px; height: 13.84px; background: #fff; border: 1.244px solid #c6d30d; border-radius: 24.667px; }
+    .ip-prog .fil { position: absolute; left: 10.2px; top: 54.15px; width: 143.19px; height: 13.84px; background: #c6d30d; border-radius: 24.667px; box-shadow: inset 0 0 5.475px rgba(0, 0, 0, .14); }
+    .ip-prog .sc { position: absolute; top: 73.7px; font-weight: 600; font-size: 9.626px; line-height: normal; color: #777; }
+
+    .ip-c .pill { position: absolute; left: 61.36px; top: 25.71px; width: 126.87px; height: 30.68px; border-radius: 66.338px; background: linear-gradient(90.17deg, #c6d30d 0%, rgba(198, 211, 13, 0) 112.38%); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 15.423px; letter-spacing: -.7711px; white-space: nowrap; border: 0; min-width: 0; padding: 0; color: #000; }
+    .ip-c .big { position: absolute; left: 24.05px; top: 72.97px; width: 200.67px; text-align: center; font-weight: 500; font-size: 26.535px; line-height: normal; }
+    .ip-c .big small { display: block; font-size: 15.423px; font-weight: 500; }
+    .ip-c .sm { position: absolute; left: 24.05px; top: 209.8px; width: 200.67px; text-align: center; font-weight: 400; font-size: 13.268px; line-height: normal; }
+
+    .ip-d .zt { position: absolute; left: 136.82px; top: 22.39px; width: 242.96px; text-align: center; display: flex; flex-direction: column; gap: 4.146px; }
+    .ip-d .zt b { font-weight: 700; font-size: 19.901px; line-height: normal; }
+    .ip-d .zt span { font-weight: 400; font-size: 13.268px; line-height: 1.16; }
+    .ip-d .mao { position: absolute; top: 81.74px; height: 163px; }
+    .ip-d .mao > div { position: absolute; inset: 0; overflow: hidden; }
+    .ip-d .mao img { position: absolute; height: 168.03%; top: -42.08%; max-width: none; display: block; }
+    .ip-d .m1 { left: 0; width: 249.49px; box-shadow: -15.755px 8.292px 22.472px rgba(0, 0, 0, .15); }
+    .ip-d .m1 img { left: -.2%; width: 208.72%; }
+    .ip-d .m2 { left: 270.49px; width: 246px; box-shadow: 14.926px 8.292px 22.472px rgba(0, 0, 0, .15); }
+    .ip-d .m2 img { left: -109.96%; width: 211.26%; }
+
+    .ip-como { margin: 57.9px auto 0; width: 462.33px; max-width: 100%; text-align: center; font-weight: 600; }
+    .ip-como .e { font-size: 12.647px; letter-spacing: 1.3912px; color: #464646; text-transform: uppercase; line-height: normal; }
+    .ip-como .h { margin-top: 5.62px; font-size: 29.51px; line-height: 1.2; color: #000; }
+
+    .ip-e1 { position: relative; margin: 27.5px 0 0 34px; width: 829.2px; height: 157px; }
+    .ip-e1 .tab { position: absolute; left: 50%; transform: translateX(-50%); top: 0; width: 179px; height: 157px; background: #c6d30d; border-radius: 13.15px 13.15px 0 0; }
+    .ip-e1 .tab span { position: absolute; left: 0; right: 0; top: 9.6px; text-align: center; font-weight: 500; font-size: 11.506px; line-height: normal; white-space: nowrap; }
+    .ip-e1 .card { position: absolute; top: 31px; width: 356px; height: 124px; background: #fff; border: 1.8px solid #c6d30d; border-radius: 19.724px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .ip-e1 .card.l { left: 0; width: calc(50% - 8.5px); }
+    .ip-e1 .card.r { right: 0; width: calc(50% - 8.5px); }
+    .ip-e1 .card p { font-weight: 600; font-size: 19.724px; line-height: 1.2; width: 257px; }
+    .ip-e1 .card.r p { width: 248px; }
+    .ip-e1 .card small { margin-top: 11px; font-weight: 300; font-size: 16.336px; line-height: 1.2; letter-spacing: .4901px; text-transform: uppercase; color: rgba(0, 0, 0, .8); white-space: nowrap; }
+
+    .ip-e2 { position: relative; margin: 14px 0 0 34px; width: 829.2px; box-sizing: border-box; padding-left: 24px; padding-right: 24px; height: 356px; background: rgba(255, 255, 255, .4); border: 1.8px solid #c6d30d; border-radius: 19.724px; display: flex; flex-direction: column; align-items: center; padding-top: 48px; }
+    .ip-e2 .tag { position: absolute; left: 50%; transform: translateX(-50%); top: -1.8px; width: 158.62px; height: 27.94px; background: #c8d400; border-radius: 0 0 13.15px 13.15px; display: flex; align-items: center; justify-content: center; padding-bottom: 2px; font-weight: 500; font-size: 11.506px; line-height: normal; white-space: nowrap; }
+    .ip-e2 h4 { width: 377.23px; text-align: center; font-weight: 700; font-size: 19.724px; line-height: normal; margin-bottom: 19.724px; }
+    .ip-e2 .cards { display: flex; gap: 12px; width: 100%; height: 159.74px; }
+    .ip-e2 .c { flex: 1; min-width: 0; background: #fff; border: 0; border-radius: 20.999px; padding: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8.75px; text-align: center; box-shadow: none; }
+    .ip-e2 .c img { display: block; width: 44.62px; height: 44.62px; }
+    .ip-e2 .c img.w { width: 59.5px; height: 47.25px; }
+    .ip-e2 .c b { font-weight: 600; font-size: 17.499px; line-height: 24.5px; letter-spacing: .35px; white-space: nowrap; }
+    .ip-e2 .c span { font-weight: 400; font-size: 12px; line-height: normal; color: rgba(0, 0, 0, .82); }
+    .ip-e2 .nota { margin-top: 19.72px; width: 390.38px; text-align: center; font-weight: 500; font-size: 11.506px; line-height: normal; }
+
+    /* ===== MODAL "Confira seu limite" (medidas do Figma, frame 65:5424) ===== */
+    .modal.lm { height: 594px; max-height: none; font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif; }
+    .lm .closex { top: 19px; right: 22px; }
+    .lm-t { position: absolute; left: 74px; top: 41.2px; width: 531.83px; font-weight: 600; font-size: 36.598px; line-height: 1.11; color: #1b1b1b; }
+    .lm-s { position: absolute; left: 74px; top: 89.2px; width: 490px; font-weight: 600; font-size: 20px; line-height: 1.34; color: rgba(0, 0, 0, .8); }
+    .lm-card { position: absolute; left: 35px; top: 185px; width: 830px; height: 367px; background: #fff; border: 2px solid #c8d400; border-radius: 30px; overflow: hidden; }
+    .lm-left { position: absolute; left: 48px; top: calc(50% + 1px); transform: translateY(-50%); width: 385px; display: flex; flex-direction: column; gap: 24px; }
+    .lm-h { font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: .44px; color: #000; }
+    .lm-h .v { display: block; color: #009316; font-weight: 700; font-size: 24px; letter-spacing: .48px; margin-top: 4px; }
+    .lm-h .g { color: rgba(0, 0, 0, .7); }
+    .lm-auth { display: flex; gap: 12px; align-items: flex-start; width: 385px; height: 60px; padding: 12px; border: 1px solid #e5e5e5; border-radius: 8px; background: #fff; text-align: left; font-family: inherit; cursor: pointer; }
+    .lm-auth .cb { width: 16px; height: 16px; border: 2px solid rgba(0, 0, 0, .3); border-radius: 3px; background: rgba(0, 0, 0, .01); flex: 0 0 auto; position: relative; }
+    .lm-auth.on .cb { background: var(--blue); border-color: var(--blue); }
+    .lm-auth.on .cb::after { content: ""; position: absolute; left: 3.5px; top: .5px; width: 4px; height: 8px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+    .lm-auth span.t { font-size: 14px; line-height: 1.2; color: #383838; }
+    .lm-btn { width: 238px; height: 48px; padding: 16px; border-radius: 32px; border: 1.4px solid #0071e3; background: #0071e3; color: #fff; font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: -.28px; cursor: pointer; white-space: nowrap; }
+    .lm-btn:hover { background: var(--blueh); border-color: var(--blueh); }
+    .lm-note { font-size: 14px; line-height: 1.2; letter-spacing: .28px; color: rgba(0, 0, 0, .8); }
+    .lm-p { font-weight: 600; font-size: 20px; line-height: 1.2; letter-spacing: .4px; color: rgba(0, 0, 0, .9); }
+    .lm-ok { gap: 15px; }
+    .lm-ok .lm-p + .lm-p { margin-top: 5px; }
+
+    /* celular do modal (frame 65:5362) */
+    .lm-phone { position: absolute; left: 456px; top: 15px; width: 363.28px; height: 658.78px; overflow: hidden; }
+    .lm-phone .body { position: absolute; left: 33.53px; top: 23.34px; width: 294.21px; height: 612.6px; background: #f2f2f7; border-radius: 35.243px; box-shadow: 10.076px 12.091px 26.902px rgba(0, 0, 0, .27); }
+    .lm-phone .time { position: absolute; left: 33.89px; top: 37.96px; width: 98.9px; padding-left: 11.384px; padding-right: 4.269px; text-align: center; font-family: "SF Pro", "SF Pro Text", -apple-system, sans-serif; font-weight: 590; font-size: 12.095px; line-height: 15.653px; color: #000; }
+    .lm-phone .lv { position: absolute; left: 221.01px; top: 41.46px; width: 98.9px; height: 9.249px; }
+    .lm-phone .fr { position: absolute; left: 24.4px; top: 8.13px; width: 314.48px; height: 642.94px; object-fit: cover; }
+    .lm-phone .cd { position: absolute; left: 50%; transform: translateX(-50%); top: 83.25px; width: 249.75px; height: 154.17px; border-radius: 12.333px; box-shadow: 3.083px 3.083px 8.633px rgba(0, 0, 0, .16); overflow: hidden; }
+    .lm-phone .cd img { position: absolute; left: -5.86%; top: -8%; width: 110.49%; height: 115%; max-width: none; }
+
+    /* ===== MODAL "Saiba mais - Assinatura" (mesmo sistema visual dos modais iPlacePay e Carteira) ===== */
+    .ico { position: relative; flex: 0 0 32.77px; width: 32.77px; height: 32.77px; overflow: hidden; }
+    .ico .v { position: absolute; }
+    .ico .v div { position: absolute; }
+    .ico .v img { display: block; width: 100%; height: 100%; max-width: none; }
+    .as2-hero { position: relative; height: 361px; overflow: hidden; background: radial-gradient(ellipse 644px 503px at 50% 365px, rgb(198, 211, 13) 30.742%, rgb(202, 214, 28) 33.229%, rgb(205, 217, 43) 35.716%, rgb(212, 222, 74) 40.691%, rgb(219, 228, 104) 45.665%, rgb(227, 233, 134) 50.639%, rgb(241, 244, 195) 60.588%, rgb(255, 255, 255) 70.536%); }
+    .as2-hero .ph { position: absolute; left: 50%; transform: translateX(-50%); top: 6px; width: 335.88px; height: 476.17px; overflow: hidden; }
+    .as2-hero .ph img { position: absolute; left: -33.16%; top: -10.81%; width: 166.43%; height: 117.37%; max-width: none; }
+    .as2-pill { margin: 24px auto 0; width: 179.08px; height: 36.87px; border-radius: 999px; background: #c8d400; display: flex; align-items: center; gap: 8px; padding-left: 24.58px; font-weight: 500; font-size: 14.336px; white-space: nowrap; }
+    .as2-pill i { width: 8.19px; height: 8.19px; border-radius: 50%; background: rgba(0, 0, 0, .56); flex: 0 0 auto; }
+
+    .ip-a.as2-21 { text-align: center; }
+    .as2-21 .t { position: absolute; left: 0; right: 0; top: 33.17px; font-weight: 600; font-size: 26.535px; line-height: 1.22; }
+    .as2-21 .n { position: absolute; left: 0; right: 0; top: 112px; font-weight: 700; font-size: 150px; line-height: 150px; letter-spacing: -4px; background: linear-gradient(141.62deg, #c8d400 23.453%, #585d00 109.51%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .as2-21 .m { position: absolute; left: 0; right: 0; top: 276px; font-weight: 500; font-size: 26.535px; line-height: 1.2; }
+    .as2-21 .p { position: absolute; left: 28px; right: 28px; top: 336px; font-weight: 400; font-size: 13.268px; line-height: 1.3; }
+    .as2-cell .ico { position: absolute; left: 50%; margin-left: -16.385px; top: 28px; }
+    .as2-cell .t { position: absolute; left: 24px; right: 24px; top: 80px; text-align: center; font-weight: 600; font-size: 21.56px; line-height: 1.2; }
+    .as2-cell .d { position: absolute; left: 24px; right: 24px; top: 140px; text-align: center; font-weight: 400; font-size: 14px; line-height: 1.3; color: rgba(0, 0, 0, .8); }
+    .as2-cell .em { position: absolute; left: 0; right: 0; top: 24px; text-align: center; font-size: 30.721px; line-height: 36.87px; }
+    .as2-cell .pill { position: absolute; left: 50%; transform: translateX(-50%); top: 25.71px; width: auto; padding: 0 22px; height: 30.68px; border-radius: 66.338px; background: linear-gradient(90.17deg, #c6d30d 0%, rgba(198, 211, 13, 0) 112.38%); display: flex; align-items: center; font-weight: 600; font-size: 15.423px; white-space: nowrap; letter-spacing: -.7711px; }
+    .as2-cell .big { position: absolute; left: 24px; right: 24px; top: 80px; text-align: center; font-weight: 500; font-size: 26.535px; line-height: 1.2; }
+    .as2-d { display: flex; }
+    .as2-d .half { flex: 1; position: relative; }
+    .as2-d .half + .half::before { content: ""; position: absolute; left: 0; top: 40px; bottom: 40px; width: 1px; background: rgba(0, 0, 0, .1); }
+    .as2-d .ico { position: absolute; left: 50%; margin-left: -16.385px; top: 44px; }
+    .as2-d .t { position: absolute; left: 24px; right: 24px; top: 96px; text-align: center; font-weight: 700; font-size: 19.901px; line-height: 1.2; }
+    .as2-d .d { position: absolute; left: 24px; right: 24px; top: 148px; text-align: center; font-weight: 400; font-size: 14px; line-height: 1.3; color: rgba(0, 0, 0, .8); }
+
+    .as2-steps { position: relative; margin: 27.5px 0 0 34px; width: 829.2px; box-sizing: border-box; background: rgba(255, 255, 255, .4); border: 1.8px solid #c6d30d; border-radius: 19.724px; padding: 48px 24px 30px; display: flex; flex-direction: column; align-items: center; }
+    .as2-steps .tag { position: absolute; left: 50%; transform: translateX(-50%); top: -1.8px; height: 27.94px; padding: 0 18px 2px; background: #c8d400; border-radius: 0 0 13.15px 13.15px; display: flex; align-items: center; font-weight: 500; font-size: 11.506px; white-space: nowrap; }
+    .as2-steps .cards { display: flex; gap: 12px; width: 100%; }
+    .as2-steps .c { flex: 1; min-width: 0; min-height: 159.74px; background: #fff; border: 0; border-radius: 20.999px; padding: 14px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8.75px; text-align: center; box-shadow: none; }
+    .as2-steps .c .nb { width: 44.62px; height: 44.62px; border-radius: 50%; background: linear-gradient(135deg, #c8d400 0%, #b5c100 100%); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 17.5px; letter-spacing: .35px; }
+    .as2-steps .c b { font-weight: 600; font-size: 17.499px; line-height: 24.5px; letter-spacing: .35px; white-space: nowrap; }
+    .as2-steps .c span { font-weight: 400; font-size: 12px; line-height: normal; color: rgba(0, 0, 0, .82); }
+    .as2-foot { margin: 28px 0 0 34px; width: 829px; font-family: "SF Pro Display", "SF Pro Text", -apple-system, sans-serif; }
+    .as2-foot a { display: inline-block; font-weight: 600; font-size: 14px; color: var(--blue); cursor: pointer; }
+    .as2-foot p { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5e5ea; font-size: 12px; line-height: 1.4; color: #6e6e73; }
+
+    /* ===== MODAL "Saiba mais - carteira iPlace" (medidas do Figma, frame 65:5205) ===== */
+    .cp { padding-bottom: 64px; color: #000; font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif; }
+    .cp-head { position: relative; height: 491px; }
+    .cp-head .eb { position: absolute; left: 50%; top: 84px; transform: translate(-50%, -50%); font-weight: 600; font-size: 19.476px; line-height: 1.11; white-space: nowrap; }
+    .cp-head .tt { position: absolute; left: 50%; top: 148px; transform: translate(-50%, -50%); width: 531.83px; max-width: 100%; text-align: center; font-weight: 600; font-size: 36.598px; line-height: 1.11; color: #1b1b1b; }
+    .cp-head img { position: absolute; left: 0; top: 160px; width: 100%; display: block; }
+    .cp-body { margin: 36px 0 0 34px; width: 829px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+    .cp-tab { box-sizing: border-box; width: 687px; height: 181px; border: 3px solid #c8d400; border-radius: 16px; overflow: hidden; background: #fff; display: grid; grid-template-columns: 444px 1fr; }
+    .cp-tab .th { height: 43px; background: rgba(200, 212, 0, .1); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 17px; line-height: 1.34; }
+    .cp-tab .th:first-child { border-right: 1px solid #c8d400; }
+    .cp-tab .td { padding: 24px 16px; display: flex; flex-direction: column; gap: 4px; }
+    .cp-tab .td:nth-child(3) { border-right: 1px solid #c8d400; width: 444px; }
+    .cp-tab .td:nth-child(4) { width: 236px; }
+    .cp-tab .td i { font-style: normal; font-weight: 700; font-size: 11px; line-height: 1.34; text-transform: uppercase; color: rgba(0, 0, 0, .5); }
+    .cp-tab .td b { font-weight: 700; font-size: 22px; line-height: 1.34; color: #1b1b1b; }
+    .cp-tab .td span { font-weight: 300; font-size: 14px; line-height: 1.34; color: rgba(0, 0, 0, .7); }
+    .cp-bancos { background: #fff; border-radius: 12px; padding: 8px 16px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .cp-bancos span { font-weight: 300; font-size: 12px; line-height: 1.11; letter-spacing: .72px; text-transform: uppercase; color: rgba(0, 0, 0, .62); white-space: nowrap; }
+    .cp-bancos img { width: 567.02px; height: 50.98px; display: block; }
+    .cp-body .ip-video, .cp-body .ip-bento { margin: 0; }
+    .cp-etapas { display: flex; flex-direction: column; align-items: center; }
+    .cp-etapas .ip-como { margin: 0; }
+    .cp-etapas .ip-e1 { margin: 27.5px 0 0; }
+    .cp-etapas .ip-e2 { margin: 14px 0 0; }
+    .ip-e1 .card.l.w p { width: 280px; }
+
+    /* ===== MODAL "Veja todas as formas de pagamento" (frame 360:5034) ===== */
+    .modal.fp { height: 750px; max-height: 88vh; border-width: 1.2px; border-radius: 24px; font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif; }
+    .fp .closex { top: 16px; right: 16px; }
+    .fp .modal-scroll { padding: 16px 48px 16px; }
+    .fp-in { padding: 0 0 24px; display: flex; flex-direction: column; gap: 24px; }
+    .fp-tabs { display: flex; border-bottom: 1px solid #6e6e73; }
+    .fp-tab { flex: 1; padding: 16px 10px; background: none; border: 0; border-bottom: 4px solid transparent; margin-bottom: -1px; font-family: inherit; font-weight: 600; font-size: 18px; line-height: 20px; letter-spacing: .36px; text-align: left; color: #6e6e73; cursor: pointer; }
+    .fp-tab.on { color: #000; border-bottom-color: #6e6e73; }
+    .fp-pane { display: none; flex-direction: column; gap: 24px; }
+    .fp-pane.on { display: flex; }
+    .fp-pane > h4 { font-weight: 600; font-size: 24px; line-height: 28px; letter-spacing: .48px; color: #424245; }
+    .fp-row { display: flex; align-items: center; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid #d9d9d9; font-weight: 700; font-size: 14px; line-height: 1.2; color: #333; }
+    .fp-row .l { display: flex; align-items: center; gap: 10px; }
+    .fp-row .l img { width: 32px; height: 32px; display: block; }
+    .fp-cols { display: flex; flex-wrap: wrap; gap: 24px; }
+    .fp-col { flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px; }
+    .fp-col label, .fp-col .lb { font-weight: 700; font-size: 14px; line-height: 1.2; color: #333; }
+    .fp-sel { position: relative; background: #fff; border: 1px solid #d9d9d9; border-radius: 4px; }
+    .fp-sel select { appearance: none; -webkit-appearance: none; width: 100%; height: 56px; padding: 8px 46px 8px 16px; border: 0; background: transparent; font-family: inherit; font-size: 16px; color: #333; cursor: pointer; }
+    .fp-sel img { position: absolute; right: 0; top: 7px; width: 30px; height: 40px; pointer-events: none; }
+    .fp-val { background: #f2f2f2; border: 1px solid #d9d9d9; border-radius: 4px; height: 59px; padding: 8px 16px; display: flex; align-items: center; gap: 10px; }
+    .fp-val b { flex: 1; font-weight: 700; font-size: 16px; line-height: 1.2; color: #333; }
+    .fp-val span { flex: 1; text-align: right; font-weight: 500; font-size: 14px; color: #6e6e73; }
+    .fp-selos { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .fp-selos span { display: inline-flex; align-items: center; gap: 4px; background: #f2f2f2; border-radius: 2px; padding: 4px 6px; font-size: 12px; line-height: 1; color: #424245; white-space: nowrap; }
+    .fp-selos .ic { width: 16px; height: 16px; border-radius: 2px; position: relative; overflow: hidden; flex: 0 0 auto; }
+    .fp-selos .ic img { position: absolute; max-width: none; }
+    .fp-txt { font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 14px; line-height: 16px; color: #424245; }
+    .fp-saiba { margin: 0 -48px; }
+    .fp-min { border-top: 1px solid #d9d9d9; padding: 10px 0; font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif; font-size: 12px; line-height: 14px; color: #595959; }
   </style>
 </head>
 
@@ -1296,7 +1010,7 @@
       <div class="price-row"><span class="price-now">R$ 8.829,00</span><span class="price-pix">no Pix</span></div>
       <div class="price-disc">-23%</div>
       <div class="price-inst">ou até 21x R$ 522,97</div>
-      <a class="price-link">Veja todas as formas de pagamento &rsaquo;</a>
+      <a class="price-link" style="cursor:pointer" onclick="openModal('mFormas')">Veja todas as formas de pagamento &rsaquo;</a>
 
       <div class="fin">
         <div class="fin-tabs">
@@ -1304,35 +1018,29 @@
           <div class="fin-tab" data-fin="ass">Assinatura</div>
           <div class="fin-tab" data-fin="cart">Carteira iPlace</div>
         </div>
+
         <div class="fin-pane on" id="pane-ipp">
-          <div class="fin-inst"><b>21x R$ 375,89</b> <span class="final">+ Parcela final de R$ 3.382,99</span></div>
-          <div class="fin-desc">Solicite seu cartão iPlacePay de forma rápida e descubra seu limite pré-aprovado.</div>
+          <div class="fin-inst"><span class="u">21x</span><b>R$ 375,89</b><span class="final">+ Parcela final de R$ 3.382,99</span></div>
+          <div class="fin-pre" id="finPre" style="display:none"><span class="u">Pré-aprovado para seu CPF:</span><b>R$ 8.000,00</b></div>
+          <div class="fin-desc" id="finDesc">Solicite seu cartão iPlacePay de forma rápida e descubra seu limite pré-aprovado.</div>
           <div class="fin-links">
-            <span class="fin-link" onclick="openModal('mIpp')">Saiba mais &rsaquo;</span>
-            <span class="fin-link" onclick="openModal('mLimite')">Confira limite &rsaquo;</span>
+            <span class="fin-link" onclick="openModal('mIpp')">Saiba mais<i><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-chevron-saibamais.svg" alt=""></i></span>
+            <span class="fin-link" onclick="openModal('mLimite')">Confira limite<i><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-chevron-saibamais.svg" alt=""></i></span>
           </div>
         </div>
-        <div class="fin-pane" id="pane-ass">
-          <div class="fin-inst"><b>21x R$ 269,00</b></div>
-          <div class="fin-seg"><svg width="16" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)"
-              stroke-width="1.5">
-              <path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3z" />
-            </svg> Seguro incluso (contra roubo e furto qualificado).</div>
-          <div class="fin-excl"><span>Exclusivo cartão de crédito Bradesco.</span> <img
-              src="https://www.iplace.com.br/file/general/iplace-51026-componente-pdp-blocos-logo-bradesco.svg"
-              alt="Bradesco"></div>
-          <div class="fin-links"><span class="fin-link" onclick="openModal('mAss')">Saiba mais &rsaquo;</span></div>
+
+        <div class="fin-pane fin-ass" id="pane-ass">
+          <div class="fin-inst"><span class="u">21x</span><b>R$ 269,00</b></div>
+          <div class="fin-seg"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-pdp-escudo.svg" alt="" width="12" height="14.58"><span>Seguro incluso (contra roubo e furto qualificado).</span></div>
+          <div class="fin-excl"><span>Exclusivo cartão de crédito Bradesco.</span><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-pdp-logo-bradesco.svg" alt="Bradesco" width="81" height="15.22"></div>
+          <div class="fin-links"><span class="fin-link" onclick="openModal('mAss')">Saiba mais<i><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-chevron-saibamais.svg" alt=""></i></span></div>
         </div>
+
         <div class="fin-pane" id="pane-cart">
-          <div class="fin-inst"><b>21x R$ 433,61</b> <span class="final">+ Parcela final de R$ 3.997,18</span></div>
-          <div class="fin-desc">Adicione o seu cartão de crédito na carteira digital iPlacePay e aproveite essa
-            condição.</div>
-          <div class="fin-bancos"><img
-              src="https://www.iplace.com.br/file/general/iplace-51026-componente-pdp-blocos-logo-bancos.svg"
-              alt="Bancos parceiros"></div>
-          <div class="fin-excl"><span>Exclusivo para os bancos: Bradesco, Banco do Brasil, BTG Pactual e Porto
-              Bank.</span></div>
-          <div class="fin-links"><span class="fin-link" onclick="openModal('mCart')">Saiba mais &rsaquo;</span></div>
+          <div class="fin-inst"><span class="u">21x</span><b>R$ 433,61</b><span class="final">+ Parcela final de R$ 3.997,18</span></div>
+          <div class="fin-desc">Adicione o seu cartão de crédito na carteira digital iPlacePay e aproveite essa condição.</div>
+          <div class="fin-bancos"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-bancos-carteira.svg" alt="Bancos parceiros" width="133" height="24.51"><span>Exclusivo para os bancos: Bradesco, Banco do Brasil, BTG Pactual e Porto Bank.</span></div>
+          <div class="fin-links"><span class="fin-link" onclick="openModal('mCart')">Saiba mais<i><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-chevron-saibamais.svg" alt=""></i></span></div>
         </div>
       </div>
 
@@ -1403,7 +1111,7 @@
         </div>
       </div>
 
-      <div class="buyback">
+      <div class="pb">
         <div class="bb-head"><svg width="22" height="24" viewBox="0 0 24 26" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -1415,18 +1123,10 @@
           </svg><b>Buyback</b></div>
         <div class="bb-desc">Troque seu aparelho atual e economize no novo.</div>
         <div class="bb-opts">
-          <div class="bb-opt on">Sem Buyback</div>
-          <div class="bb-opt">Com Buyback</div>
+          <div class="bb-opt on" onclick="selBb(this)">Sem Buyback</div>
+          <div class="bb-opt" onclick="selBb(this)">Com Buyback</div>
         </div>
-        <div class="bb-info">
-          <img src="https://www.iplace.com.br/file/v7708146878077328421/general/iplace-services-300425-2.jpg"
-            alt="Buyback">
-          <div>
-            <div class="t" onclick="openModal('mBuyback')">Saiba mais</div>
-            <div class="d">Seu aparelho atual vale. Veja vantagens.</div>
-          </div>
-          <span class="plus">&#8853;</span>
-        </div>
+        <button class="pb-card" type="button" onclick="openModal('mBuyback')"><img class="ph" src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-buyback-foto.png" alt=""><span class="tx"><b>Como funciona o Buyback iPlace?</b><i>Confira como você pode economizar no seu novo iPhone com o Buyback.</i></span><img class="ar" src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-buyback-seta.svg" alt=""></button>
       </div>
 
       <div class="qty">
@@ -1515,139 +1215,306 @@
     <div class="fbt-cta"><button>Adicionar 4 item(s) ao carrinho</button></div>
   </section>
 
-  <!-- MODAL iPlacePay -->
+  <!-- MODAL iPlacePay (Saiba mais) — fiel ao frame 65:4932 -->
   <div class="overlay" id="mIpp">
-    <div class="modal"><button class="closex" onclick="closeModal('mIpp')"><svg xmlns="http://www.w3.org/2000/svg"
+    <div class="modal"><button class="closex" onclick="closeModal('mIpp')" aria-label="Fechar"><svg xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20" height="20" width="20" fill="rgba(0, 0, 0, 0.56)">
           <path
             d="M12.12,10l4.07-4.06a1.5,1.5,0,1,0-2.11-2.12L10,7.88,5.94,3.81A1.5,1.5,0,1,0,3.82,5.93L7.88,10,3.81,14.06a1.5,1.5,0,0,0,0,2.12,1.51,1.51,0,0,0,2.13,0L10,12.12l4.06,4.07a1.45,1.45,0,0,0,1.06.44,1.5,1.5,0,0,0,1.06-2.56Z">
           </path>
         </svg></button>
-<div class="modal-scroll">
-      <div class="mh-head">
-        <div class="mh-eye">iPlacePay</div>
-        <div class="mh-title">Facilita o novo Apple que você quer, e o próximo também.</div>
-      </div>
-      <img class="mh-img"
-        src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-topo-2.png" alt="">
-      <p class="mh-sub">Com o iPlacePay você parcela 70% do seu Apple em 21x, e decide como pagar os 30% finais depois.
-      </p>
-      <div class="m-video"><img
-          src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-video-buyback-exemplo.png"
-          alt="iPlacePay facilita seu iPhone em 21x"></div>
-      <div class="bento">
-        <div class="bento-cell bento-a">
-          <div class="carousel" id="carIpp">
-            <img class="on"
-              src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-macbook.png"
-              alt="MacBook Neo"><img
-              src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-iphone.png"
-              alt="iPhone"><img
-              src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-watch.png"
-              alt="Watch"><img
-              src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-ipad.png"
-              alt="iPad"><img
-              src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-airpods.png"
-              alt="AirPods">
+      <div class="modal-scroll">
+        <div class="ip">
+          <div class="ip-head">
+            <div class="ip-eye">iPlacePay</div>
+            <div class="ip-title">Facilita o novo Apple que você quer, e o próximo também.</div>
           </div>
-        </div>
-        <div class="bento-cell bento-b">
-          <div class="t">Pague 70% do produto em 21x parcelas iguais</div>
-          <div class="prog-card">
-            <div class="pl">Valor total do seu produto</div>
-            <div class="pn">Progresso iPlacePay</div>
-            <div class="prog-bar"><i></i></div>
-            <div class="prog-scale"><span>21x</span><span>70%</span></div>
-          </div>
-        </div>
-        <div class="bento-cell bento-c"><span class="pill-final">Parcela final</span>
-          <div class="big">Ao final dos 70%,<br>você escolhe como pagar os 30% restantes.</div>
-          <div class="sm">Veja detalhes abaixo</div>
-        </div>
-        <div class="bento-cell bento-d">
-          <div class="t">Zero dor de cabeça</div>
-          <div class="s">Desapegue das preocupações com a revenda</div><img
-            src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-maos-aparelhos.png"
-            alt="">
-        </div>
-      </div>
-      <div class="como">
-        <div class="eye">COMO FUNCIONA</div>
-        <div class="t">Compre seu novo Apple com uma<br>parcela que cabe no seu bolso.</div>
-      </div>
-      <div class="etapas">
-        <div class="et1-wrap"><span class="etapa-tag">Etapa 1 · Você começa por aqui</span></div>
-        <div class="et1-cards">
-          <div class="et1-card">
-            <div class="c-main">Escolha o iPlacePay na hora<br>de concluir a sua compra.</div>
-          </div>
-          <div class="et1-card">
-            <div class="c-main">Faça o processo de adesão<br>do cartão de crédito.</div>
-            <div class="c-sub">SEM SAIR DO SITE • RÁPIDO</div>
-          </div>
-        </div>
-        <div class="et2-wrap">
-          <div class="et2-tagwrap"><span class="etapa-tag">Etapa 2 · Ao final das 21x</span></div>
-          <div class="et2-title">Ao chegar na 22ª parcela, você pode<br>escolher como quitar os 30% restantes.</div>
-          <div class="et2-cards">
-            <div class="et2-card"><img
-                src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-troque.svg"
-                alt="">
-              <div class="ct">Troque e Renove</div>
-              <div class="cd">Devolva o produto e troque por um novo de última geração, renovando o programa por mais 21
-                meses.</div>
+          <img class="ip-top"
+            src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-topo-2.png" alt="">
+          <p class="ip-sub">Com o iPlacePay você parcela 70% do seu Apple em 21x, e decide como pagar os 30% finais depois.</p>
+          <div class="ip-video"><img
+              src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-video-buyback-exemplo.png"
+              alt="iPlacePay facilita seu iPhone em 21x"></div>
+
+          <div class="ip-bento">
+            <div class="ip-cell ip-a">
+              <div class="carousel" id="carIpp">
+                <img class="on"
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-macbook.png"
+                  alt="MacBook Neo"><img
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-iphone.png"
+                  alt="iPhone"><img
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-watch.png"
+                  alt="Watch"><img
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-ipad.png"
+                  alt="iPad"><img
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-airpods.png"
+                  alt="AirPods">
+              </div>
             </div>
-            <div class="et2-card"><img
-                src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-devolva.svg"
-                alt="">
-              <div class="ct">Devolva e encerre</div>
-              <div class="cd">Devolva o produto, quitando a última parcela e encerrando o programa.</div>
-            </div>
-            <div class="et2-card"><img
-                src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-pague.svg"
-                alt="">
-              <div class="ct">Pague e conclua</div>
-              <div class="cd">Pague os 30% restantes e fique com o seu iPhone, concluindo o programa.</div>
+            <div class="ip-right">
+              <div class="ip-row">
+                <div class="ip-cell ip-b">
+                  <div class="t">Pague 70% do produto em 21x parcelas iguais</div>
+                  <div class="ip-prog">
+                    <span class="pl">Valor total do seu produto</span>
+                    <span class="pn">Progresso iPlacePay</span>
+                    <span class="trk"></span><span class="fil"></span>
+                    <span class="sc" style="left:11.4px">21x</span><span class="sc" style="left:134.7px">70%</span>
+                  </div>
+                </div>
+                <div class="ip-cell ip-c">
+                  <span class="pill">Parcela final</span>
+                  <div class="big"><small>Ao final dos 70%,</small>você escolhe<br>como pagar os<br>30% restantes.</div>
+                  <div class="sm">Veja detalhes abaixo</div>
+                </div>
+              </div>
+              <div class="ip-cell ip-d">
+                <div class="zt"><b>Zero dor de cabeça</b><span>Desapegue das<br>preocupações com a revenda</span></div>
+                <div class="mao m1"><div><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-maos-juntas-leve.png" alt=""></div></div><div class="mao m2"><div><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-maos-juntas-leve.png" alt=""></div></div>
+              </div>
             </div>
           </div>
-          <div class="et2-note">Para devolver o produto, ele deve estar em condições excelentes físicas/<br>estéticas e
-            operando plenamente. Essa opção não é disponível para AirPods.</div>
+
+          <div class="ip-como">
+            <div class="e">Como funciona</div>
+            <div class="h">Compre seu novo Apple com uma parcela que cabe no seu bolso.</div>
+          </div>
+
+          <div class="ip-e1">
+            <div class="tab"><span>Etapa 1 · Você começa por aqui</span></div>
+            <div class="card l"><p>Escolha o iPlacePay na hora de concluir a sua compra.</p></div>
+            <div class="card r"><p>Faça o processo de adesão do cartão de crédito.</p><small>sem sair do site • rápido</small></div>
+          </div>
+
+          <div class="ip-e2">
+            <div class="tag">Etapa 2 · Ao final das 21x</div>
+            <h4>Ao chegar na 22ª parcela, você pode escolher como quitar os 30% restantes.</h4>
+            <div class="cards">
+              <div class="c"><img class="w"
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-troque.svg" alt="">
+                <b>Troque e Renove</b>
+                <span>Devolva o produto e troque por um novo de última geração, renovando o programa por mais 21 meses.</span>
+              </div>
+              <div class="c"><img
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-devolva.svg" alt="">
+                <b>Devolva e encerre</b>
+                <span>Devolva o produto, quitando a última parcela e encerrando o programa.</span>
+              </div>
+              <div class="c"><img
+                  src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-pague.svg" alt="">
+                <b>Pague e conclua</b>
+                <span>Pague os 30% restantes e fique com o seu iPhone, concluindo o programa.</span>
+              </div>
+            </div>
+            <p class="nota">Para devolver o produto, ele deve estar em condições excelentes físicas/estéticas e operando plenamente. Essa opção não é disponível para AirPods.</p>
+          </div>
         </div>
       </div>
     </div>
-</div>
   </div>
 
-  <!-- MODAL Assinatura (imagem) -->
+  <!-- MODAL Assinatura (Saiba mais) — mesmo sistema visual dos modais iPlacePay e Carteira; conteúdo do frame 65:5109 -->
   <div class="overlay" id="mAss">
-    <div class="modal"><button class="closex" onclick="closeModal('mAss')"><svg xmlns="http://www.w3.org/2000/svg"
+    <div class="modal"><button class="closex" onclick="closeModal('mAss')" aria-label="Fechar"><svg xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20" height="20" width="20" fill="rgba(0, 0, 0, 0.56)">
           <path
             d="M12.12,10l4.07-4.06a1.5,1.5,0,1,0-2.11-2.12L10,7.88,5.94,3.81A1.5,1.5,0,1,0,3.82,5.93L7.88,10,3.81,14.06a1.5,1.5,0,0,0,0,2.12,1.51,1.51,0,0,0,2.13,0L10,12.12l4.06,4.07a1.45,1.45,0,0,0,1.06.44,1.5,1.5,0,0,0,1.06-2.56Z">
           </path>
         </svg></button>
-<div class="modal-scroll">
-      <img style="width:100%;display:block;"
-        src="https://www.iplace.com.br/file/general/iplace-51026-modal-assinatura-saiba-mais-topo.png"
-        alt="Assinatura iPlace">
+      <div class="modal-scroll">
+        <div class="ip">
+          <div class="ip-head">
+            <div class="ip-eye">Assinatura iPlace</div>
+            <div class="ip-title">Seu iPhone sempre novo, sem precisar comprar</div>
+          </div>
+          <div class="as2-hero"><div class="ph"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-iphones.png" alt="iPhones"></div></div>
+          <p class="ip-sub">Assine e use o novo iPhone com parcelas mensais, seguro incluso e troca programada.</p>
+          <div class="as2-pill"><i></i>Ciclo de 21 meses</div>
+
+          <div class="ip-video"><img
+              src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-video-buyback-exemplo.png"
+              alt="Assinatura iPlace"></div>
+
+          <div class="ip-bento">
+            <div class="ip-cell ip-a as2-21">
+              <div class="t">Seu ciclo dura</div>
+              <div class="n">21</div>
+              <div class="m">meses</div>
+              <div class="p">No 21º mês, você quita a parcela final, devolve o aparelho e encerra o ciclo, ou renova sua assinatura para um novo modelo.</div>
+            </div>
+            <div class="ip-right">
+              <div class="ip-row">
+                <div class="ip-cell ip-b as2-cell">
+                  <div class="ico">
+                    <div class="v" style="inset:8.33% 8.32% 8.33% 8.34%"><div style="inset:-5%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-0.svg" alt=""></div></div>
+                    <div class="v" style="inset:12.5% 16.67% 70.83% 83.33%"><div style="inset:-25% -1.37px"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-1.svg" alt=""></div></div>
+                    <div class="v" style="inset:20.83% 8.33% 79.17% 75%"><div style="inset:-1.37px -25%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-2.svg" alt=""></div></div>
+                    <div class="v" style="inset:70.83% 83.33% 20.83% 16.67%"><div style="inset:-50% -1.37px"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-3.svg" alt=""></div></div>
+                    <div class="v" style="inset:75% 79.17% 25% 12.5%"><div style="inset:-1.37px -50%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-4.svg" alt=""></div></div>
+                  </div>
+                  <div class="t">Sempre atualizado</div>
+                  <div class="d">Tenha acesso ao iPhone mais recente</div>
+                </div>
+                <div class="ip-cell ip-c as2-cell">
+                  <span class="pill">Parcelas reduzidas</span>
+                  <div class="big">Mensalidades que cabem no seu bolso.</div>
+                </div>
+              </div>
+              <div class="ip-cell ip-d as2-d">
+                <div class="half">
+                  <div class="ico">
+                    <div class="v" style="inset:12.5% 12.5% 50% 12.5%"><div style="inset:-11.11% -5.56%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-5.svg" alt=""></div></div>
+                    <div class="v" style="inset:12.5% 12.5% 66.67% 66.67%"><div style="inset:-20%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-6.svg" alt=""></div></div>
+                    <div class="v" style="inset:50% 12.5% 12.5% 12.5%"><div style="inset:-11.11% -5.56%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-7.svg" alt=""></div></div>
+                    <div class="v" style="inset:66.67% 66.67% 12.5% 12.5%"><div style="inset:-20%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-8.svg" alt=""></div></div>
+                  </div>
+                  <div class="t">Sem compromisso longo</div>
+                  <div class="d">Flexibilidade ao final do ciclo</div>
+                </div>
+                <div class="half">
+                  <div class="ico">
+                    <div class="v" style="inset:8.33% 16.67% 8.32% 16.67%"><div style="inset:-5% -6.25%"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-assinatura-icone-9.svg" alt=""></div></div>
+                  </div>
+                  <div class="t">Aparelho protegido</div>
+                  <div class="d">Segurança durante todo o período</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ip-como">
+            <div class="e">Como funciona</div>
+            <div class="h">Assinar é simples, em três passos.</div>
+          </div>
+
+          <div class="as2-steps">
+            <div class="tag">Do primeiro dia ao 21º mês</div>
+            <div class="cards">
+              <div class="c"><div class="nb">01</div><b>Escolha seu iPhone</b><span>Selecione o modelo desejado e o plano que melhor se adapta às suas necessidades e ao seu estilo.</span></div>
+              <div class="c"><div class="nb">02</div><b>Aproveite por 21 meses</b><span>Use seu novo iPhone pagando mensalidades menores do que em um financiamento tradicional.</span></div>
+              <div class="c"><div class="nb">03</div><b>Decida o que fazer</b><span>Ao fim do ciclo, você pode renovar por um novo, devolver ou comprar o aparelho atual.</span></div>
+            </div>
+          </div>
+
+          <div class="as2-foot">
+            <a>Saiba mais sobre iPlaceClub Assinatura ›</a>
+            <p>Seguro contra roubo, furto qualificado e quebra acidental.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
   </div>
 
-  <!-- MODAL Carteira iPlace (imagem fiel do topo já contém tudo) -->
+  <!-- MODAL Carteira iPlace (Saiba mais) — fiel ao frame 65:5205 -->
   <div class="overlay" id="mCart">
-    <div class="modal"><button class="closex" onclick="closeModal('mCart')"><svg xmlns="http://www.w3.org/2000/svg"
+    <div class="modal"><button class="closex" onclick="closeModal('mCart')" aria-label="Fechar"><svg xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20" height="20" width="20" fill="rgba(0, 0, 0, 0.56)">
           <path
             d="M12.12,10l4.07-4.06a1.5,1.5,0,1,0-2.11-2.12L10,7.88,5.94,3.81A1.5,1.5,0,1,0,3.82,5.93L7.88,10,3.81,14.06a1.5,1.5,0,0,0,0,2.12,1.51,1.51,0,0,0,2.13,0L10,12.12l4.06,4.07a1.45,1.45,0,0,0,1.06.44,1.5,1.5,0,0,0,1.06-2.56Z">
           </path>
         </svg></button>
-<div class="modal-scroll">
-      <img style="width:100%;display:block;"
-        src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-topo-2.png"
-        alt="Carteira iPlacePay">
+      <div class="modal-scroll">
+        <div class="cp">
+          <div class="cp-head">
+            <img src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-topo-2.png" alt="">
+            <div class="eb">Carteira iPlacePay</div>
+            <div class="tt">Facilita o novo Apple que você quer, e o próximo também.</div>
+          </div>
+
+          <div class="cp-body">
+            <div class="cp-tab">
+              <div class="th">70% parcelado</div><div class="th">30% ao final</div>
+              <div class="td"><i>Você parcela</i><b>70% em 21x</b><span>Esse é o valor que ocupa o seu limite de crédito. Parcelas fixas, sem reajuste.</span></div>
+              <div class="td"><i>Ao final do plano</i><b>30% restante</b><span>Você paga o valor residual ou devolve o aparelho em bom estado.</span></div>
+            </div>
+
+            <div class="cp-bancos">
+              <span>Disponível para:</span>
+              <img src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-logo-bancos.svg" alt="Bradesco, Banco do Brasil, BTG Pactual e Porto Bank">
+            </div>
+
+            <div class="ip-video"><img
+                src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-video-buyback-exemplo.png"
+                alt="iPlacePay facilita seu iPhone em 21x"></div>
+
+            <div class="ip-bento">
+              <div class="ip-cell ip-a">
+                <div class="carousel" id="carCart">
+                  <img class="on"
+                    src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-macbook.png"
+                    alt="MacBook Neo"><img
+                    src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-iphone.png"
+                    alt="iPhone"><img
+                    src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-watch.png"
+                    alt="Watch"><img
+                    src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-ipad.png"
+                    alt="iPad"><img
+                    src="https://www.iplace.com.br/file/general/iplace-51026-modal-carteira-iplacepay-saiba-mais-airpods.png"
+                    alt="AirPods">
+                </div>
+              </div>
+              <div class="ip-right">
+                <div class="ip-row">
+                  <div class="ip-cell ip-b">
+                    <div class="t">Pague 70% do produto em 21x parcelas iguais</div>
+                    <div class="ip-prog">
+                      <span class="pl">Valor total do seu produto</span>
+                      <span class="pn">Progresso iPlacePay</span>
+                      <span class="trk"></span><span class="fil"></span>
+                      <span class="sc" style="left:11.4px">21x</span><span class="sc" style="left:134.7px">70%</span>
+                    </div>
+                  </div>
+                  <div class="ip-cell ip-c">
+                    <span class="pill">Parcela final</span>
+                    <div class="big"><small>Ao final dos 70%,</small>você escolhe<br>como pagar os<br>30% restantes.</div>
+                    <div class="sm">Veja detalhes abaixo</div>
+                  </div>
+                </div>
+                <div class="ip-cell ip-d">
+                  <div class="zt"><b>Zero dor de cabeça</b><span>Desapegue das<br>preocupações com a revenda</span></div>
+                  <div class="mao m1"><div><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-maos-juntas-leve.png" alt=""></div></div><div class="mao m2"><div><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-maos-juntas-leve.png" alt=""></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cp-etapas">
+              <div class="ip-como">
+                <div class="e">Como funciona</div>
+                <div class="h">Compre seu novo Apple com uma parcela que cabe no seu bolso.</div>
+              </div>
+              <div class="ip-e1">
+                <div class="tab"><span>Etapa 1 · Você começa por aqui</span></div>
+                <div class="card l w"><p>Escolha o Carteira iPlacePay na hora de concluir a sua compra.</p></div>
+                <div class="card r"><p>Faça o processo de adesão à carteira digital iPlace.</p><small>sem sair do site • rápido</small></div>
+              </div>
+              <div class="ip-e2">
+                <div class="tag">Etapa 2 · Ao final das 21x</div>
+                <h4>Ao chegar na 22ª parcela, você pode escolher como quitar os 30% restantes.</h4>
+                <div class="cards">
+                  <div class="c"><img class="w"
+                      src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-troque.svg" alt="">
+                    <b>Troque e Renove</b>
+                    <span>Devolva o produto e troque por um novo de última geração, renovando o programa por mais 21 meses.</span>
+                  </div>
+                  <div class="c"><img
+                      src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-devolva.svg" alt="">
+                    <b>Devolva e encerre</b>
+                    <span>Devolva o produto, quitando a última parcela e encerrando o programa.</span>
+                  </div>
+                  <div class="c"><img
+                      src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-icone-pague.svg" alt="">
+                    <b>Pague e conclua</b>
+                    <span>Pague os 30% restantes e fique com o seu iPhone, concluindo o programa.</span>
+                  </div>
+                </div>
+                <p class="nota">Para devolver o produto, ele deve estar em condições excelentes físicas/estéticas e operando plenamente. Essa opção não é disponível para AirPods.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
   </div>
 
   <!-- MODAL Buyback (imagem) -->
@@ -1682,48 +1549,85 @@
 </div>
   </div>
 
-  <!-- MODAL Confira limite -->
+  <!-- MODAL Confira limite — fiel ao frame 65:5359 (estados Avaliar / avaliado) -->
   <div class="overlay" id="mLimite">
-    <div class="modal"><button class="closex" onclick="closeModal('mLimite')"><svg xmlns="http://www.w3.org/2000/svg"
+    <div class="modal lm"><button class="closex" onclick="closeModal('mLimite')" aria-label="Fechar"><svg xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20" height="20" width="20" fill="rgba(0, 0, 0, 0.56)">
           <path
             d="M12.12,10l4.07-4.06a1.5,1.5,0,1,0-2.11-2.12L10,7.88,5.94,3.81A1.5,1.5,0,1,0,3.82,5.93L7.88,10,3.81,14.06a1.5,1.5,0,0,0,0,2.12,1.51,1.51,0,0,0,2.13,0L10,12.12l4.06,4.07a1.45,1.45,0,0,0,1.06.44,1.5,1.5,0,0,0,1.06-2.56Z">
           </path>
         </svg></button>
-<div class="modal-scroll">
-      <div class="cl-modal" id="clAvaliar">
-        <h2 class="cl-title">iPlacePay</h2>
-        <p class="cl-sub">Com o banco digital iPlacePay, você pode parcelar 70% do seu Apple em 21x + parcela final.</p>
-        <div class="cl-card">
-          <div class="cl-left">
-            <h3>Descubra seu limite pré-aprovado. É rápido e não compromete nada.</h3>
-            <label class="cl-accept"><input type="checkbox"><span>Autorizo a consulta do meu CPF para verificar meu
-                limite pré-aprovado no iPlacePay.</span></label>
-            <button class="cl-btn" onclick="showApproved()">Ver meu limite pré-aprovado</button>
-            <div class="cl-note">Você precisa estar logado para ver seu limite.</div>
-          </div>
-          <div class="cl-right"><img class="ph"
-              src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-topo-2.png" alt="">
-          </div>
+      <div class="lm-t">iPlacePay</div>
+      <p class="lm-s">Com o banco digital iPlacePay, você pode parcelar 70% do seu Apple em 21x + parcela final.</p>
+      <div class="lm-card">
+        <div class="lm-phone">
+          <div class="body"></div>
+          <div class="time">9:41</div>
+          <img class="lv" src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-phone-levels.svg" alt="">
+          <img class="fr" src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-phone-frame.png" alt="">
+          <div class="cd"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-phone-cartao.png" alt="Cartão iPlacePay"></div>
         </div>
-      </div>
-      <div class="cl-modal cl-approved" id="clAvaliado" style="display:none;">
-        <h2 class="cl-title">iPlacePay</h2>
-        <p class="cl-sub">Com o banco digital iPlacePay, você pode parcelar 70% do seu Apple em 21x + parcela final.</p>
-        <div class="cl-card">
-          <div class="cl-left">
-            <p style="color:var(--ink);font-weight:600;">Valor pré-aprovado para compra com iPlacePay:</p>
-            <div class="big">R$ 8.000,00</div>
-            <p>Você já pode usar seu limite pré-aprovado para comprar com o iPlacePay!</p>
-            <p>É só seguir para o pagamento e fazer a contratação do cartão.</p>
-          </div>
-          <div class="cl-right"><img class="ph"
-              src="https://www.iplace.com.br/file/general/iplace-51026-modal-iplacepay-saiba-mais-topo-2.png" alt="">
-          </div>
+
+        <div class="lm-left" id="clAvaliar">
+          <div class="lm-h">Descubra seu limite pré-aprovado. É rápido e não compromete nada.</div>
+          <button class="lm-auth" id="lmAuth" type="button"><span class="cb"></span><span class="t">Autorizo a consulta do meu CPF para verificar meu limite pré-aprovado no iPlacePay.</span></button>
+          <button class="lm-btn" type="button" onclick="showApproved()">Ver meu limite pré-aprovado</button>
+          <div class="lm-note">Você precisa estar logado para ver seu limite.</div>
+        </div>
+
+        <div class="lm-left lm-ok" id="clAvaliado" style="display:none;">
+          <div class="lm-h"><span class="g">Valor pré-aprovado para compra com iPlacePay:</span><span class="v">R$ 8.000,00</span></div>
+          <p class="lm-p">Você já pode usar seu limite pré-aprovado para comprar com o iPlacePay!</p>
+          <p class="lm-p">É só seguir para o pagamento e fazer a contratação do cartão.</p>
         </div>
       </div>
     </div>
-</div>
+  </div>
+
+  <!-- MODAL Formas de pagamento (genérico) — fiel ao frame 360:5034 (somente Compra e Assinatura, conforme a anotação do Figma) -->
+  <div class="overlay" id="mFormas">
+    <div class="modal fp"><button class="closex" onclick="closeModal('mFormas')" aria-label="Fechar"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20" height="20" width="20" fill="rgba(0, 0, 0, 0.56)">
+          <path
+            d="M12.12,10l4.07-4.06a1.5,1.5,0,1,0-2.11-2.12L10,7.88,5.94,3.81A1.5,1.5,0,1,0,3.82,5.93L7.88,10,3.81,14.06a1.5,1.5,0,0,0,0,2.12,1.51,1.51,0,0,0,2.13,0L10,12.12l4.06,4.07a1.45,1.45,0,0,0,1.06.44,1.5,1.5,0,0,0,1.06-2.56Z">
+          </path>
+        </svg></button>
+      <div class="modal-scroll">
+        <div class="fp-in">
+          <div class="fp-tabs"><button class="fp-tab on" data-fp="compra" type="button">Compra</button><button class="fp-tab" data-fp="ass" type="button">Assinatura</button><button class="fp-tab" data-fp="ipp" type="button">iPlacePay</button><button class="fp-tab" data-fp="cart" type="button">Carteira iPlace</button></div>
+
+          <div class="fp-pane on" id="fp-compra">
+            <h4>Formas de pagamento à vista:</h4>
+            <div class="fp-row"><span class="l"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-formas-pix.svg" alt="">Pix</span><span>R$ 8.829,00</span></div>
+            <div class="fp-row"><span class="l"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-formas-boleto.svg" alt="">Boleto</span><span>R$ 8.829,00</span></div>
+            <h4>Cartão de crédito:</h4>
+            <div class="fp-cols">
+              <div class="fp-col"><label for="fpParc">Parcelas</label>
+                <div class="fp-sel"><select id="fpParc"></select><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-formas-seta.svg" alt=""></div>
+              </div>
+              <div class="fp-col"><span class="lb">Valor da parcela</span>
+                <div class="fp-val"><b id="fpVal">R$ 522,97</b><span id="fpTot">Total: R$ 10.982,37</span></div>
+                <div class="fp-selos">
+                  <span><i class="ic"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-formas-selo-bb.svg" alt="" style="inset:0;width:100%;height:100%"></i>Cartão Banco do Brasil</span>
+                  <span><i class="ic"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-formas-selo-bradesco.png" alt="" style="height:160%;left:-35.35%;top:-6.67%;width:170.7%"></i>Cartão Bradesco</span>
+                  <span><i class="ic"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-formas-selo-santander.png" alt="" style="height:139.32%;left:-24.49%;top:.85%;width:150%"></i>Cartão Santander</span>
+                  <span><i class="ic"><img src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-formas-selo-banrisul.png" alt="" style="height:165.43%;left:-51.12%;top:-6.42%;width:215.39%"></i>Cartão Banrisul</span>
+                </div>
+              </div>
+            </div>
+            <h4>Dividir formas de pagamento:</h4>
+            <p class="fp-txt">Você pode dividir o valor da compra em dois cartões de crédito, ou combinar Pix ou boleto com um cartão de crédito. A combinação é escolhida na etapa de pagamento.</p>
+            <div class="fp-min">Parcela mínima de R$ 10,00</div>
+          </div>
+
+          <div class="fp-pane" id="fp-ass"><div class="fp-saiba" data-src="mAss"></div></div>
+
+          <div class="fp-pane" id="fp-ipp"><div class="fp-saiba" data-src="mIpp"></div></div>
+
+          <div class="fp-pane" id="fp-cart"><div class="fp-saiba" data-src="mCart"></div></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -1733,7 +1637,37 @@
     document.querySelectorAll('.fin-tab').forEach(t => {t.addEventListener('click', () => {document.querySelectorAll('.fin-tab').forEach(x => x.classList.toggle('on', x === t)); const k = t.dataset.fin; document.querySelectorAll('.fin-pane').forEach(p => p.classList.toggle('on', p.id === 'pane-' + k));});});
     function startCarousel(id) {const car = document.getElementById(id); if (!car) return; const imgs = car.querySelectorAll('img'); let i = 0; setInterval(() => {imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on');}, 2000);}
     startCarousel('carIpp');
-    function showApproved() {document.getElementById('clAvaliar').style.display = 'none'; document.getElementById('clAvaliado').style.display = 'block';}
+    startCarousel('carCart');
+    function showApproved() {document.getElementById('clAvaliar').style.display = 'none'; document.getElementById('clAvaliado').style.display = 'flex'; document.getElementById('finPre').style.display = 'flex'; document.getElementById('finDesc').textContent = 'Solicite seu cartão iPlacePay de forma fácil e rápida, diretamente no site iPlace, e aproveite os benefícios.';}
+    document.getElementById('lmAuth').addEventListener('click', function () {this.classList.toggle('on');});
+    function selBb(b) {document.querySelectorAll('.bb-opt').forEach(function (x) {x.classList.toggle('on', x === b);});}
+    // Formas de pagamento: abas e simulação de parcelas
+    (function () {
+      var total = 21 * 522.97, sel = document.getElementById('fpParc');
+      function brl(v) { return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+      for (var n = 1; n <= 21; n++) sel.insertAdjacentHTML('beforeend', '<option value="' + n + '"' + (n === 21 ? ' selected' : '') + '>Em ' + n + 'x</option>');
+      function upd() { var n = +sel.value; document.getElementById('fpVal').textContent = brl(n === 21 ? 522.97 : total / n); document.getElementById('fpTot').textContent = 'Total: ' + brl(total); }
+      sel.addEventListener('change', upd); upd();
+      document.querySelectorAll('.fp-tab').forEach(function (t) { t.addEventListener('click', function () {
+        document.querySelectorAll('.fp-tab').forEach(function (x) { x.classList.toggle('on', x === t); });
+        document.querySelectorAll('.fp-pane').forEach(function (p) { p.classList.toggle('on', p.id === 'fp-' + t.dataset.fp); });
+        loadSaiba(document.getElementById('fp-' + t.dataset.fp));
+        document.querySelector('#mFormas .modal-scroll').scrollTop = 0;
+      }); });
+      // traz o conteúdo dos modais "Saiba mais" já existentes para dentro da aba (cópia, sem ids repetidos)
+      var n2 = 0;
+      function loadSaiba(pane) {
+        var box = pane && pane.querySelector('.fp-saiba');
+        if (!box || box.dataset.ok) return;
+        var src = document.querySelector('#' + box.dataset.src + ' .modal-scroll > div');
+        if (!src) return;
+        var c = src.cloneNode(true);
+        c.querySelectorAll('[id]').forEach(function (e) { e.removeAttribute('id'); });
+        box.appendChild(c);
+        c.querySelectorAll('.carousel').forEach(function (car) { car.id = 'carFp' + (++n2); startCarousel(car.id); });
+        box.dataset.ok = '1';
+      }
+    })();
   </script>
 </body>
 
