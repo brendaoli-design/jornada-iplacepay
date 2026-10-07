@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrega — iPlace</title>
+  <style>
+    :root {
+      --ink: #121212;
+      --gray2: #424245;
+      --gray3: #6E6E73;
+      --gray4: #D9D9D9;
+      --gray5: #F2F2F2;
+      --blue: #0071E3;
+      --blueh: #005BB5;
+      --green: #008900;
+      --soft: #EEF4FD;
+      --font: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Roboto", "Arial", sans-serif;
+      --display: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    body { font-family: var(--font); color: var(--ink); background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; }
+    img { max-width: 100%; display: block; }
+
+    .top { height: 72px; border-bottom: 1px solid var(--gray5); display: flex; align-items: center; justify-content: space-between; padding: 0 56px; }
+    .top .logos { display: flex; align-items: center; gap: 14px; }
+    .top .logo { height: 46px; width: auto; }
+    .top .partner { height: 40px; }
+
+    /* layout fluido (1000–1920px): resumo sempre colado à direita, com largura proporcional */
+    .co { display: grid; grid-template-columns: minmax(0, 1fr) clamp(380px, 34.7vw, 520px); min-height: calc(100vh - 73px); }
+    .co-main { width: 100%; max-width: 824px; justify-self: center; padding: 46px clamp(24px, 3vw, 48px) 48px; }
+    .sec { border-bottom: 1px solid var(--gray4); padding: 20px 0; }
+    .sec:first-child { padding-top: 0; }
+    .sec-h { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--gray3); }
+    .tog { width: 20px; height: 20px; border: 0; border-radius: 4px; background: var(--soft); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 11px; }
+    .email { font-size: 12px; margin-top: 14px; }
+
+    .card { display: flex; align-items: center; gap: 12px; background: var(--soft); border-radius: 6px; padding: 14px 16px; cursor: pointer; }
+    .card + .card { margin-top: 2px; }
+    .card.plain { background: none; }
+    .rd { width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid #B8C4E0; background: #fff; flex: 0 0 auto; }
+    .card.on .rd { border: 4px solid var(--blue); }
+    .card .nm { font-size: 14px; font-weight: 500; }
+    .card .sm { font-size: 12px; color: var(--gray2); margin-top: 3px; line-height: 1.35; }
+    .card .grow { flex: 1; }
+    .card .dots { color: var(--blue); font-size: 18px; letter-spacing: -1px; font-weight: 700; }
+    .card .pr { font-size: 12px; font-weight: 600; align-self: flex-start; letter-spacing: .3px; }
+    .card .rec { font-size: 11px; color: var(--green); }
+    .add-addr { display: inline-flex; gap: 8px; align-items: center; color: var(--blue); font-size: 14px; margin-top: 16px; background: none; border: 0; padding: 0; }
+    .add-addr b { font-size: 18px; font-weight: 400; }
+    .lbl { font-size: 14px; color: var(--gray3); margin-bottom: 14px; }
+    .opts .card { align-items: flex-start; }
+    .opts .rd { margin-top: 2px; }
+
+    .cta { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 24px; margin-top: 20px; border-radius: 32px; background: var(--blue); color: #fff; font-size: 14px; font-weight: 600; letter-spacing: -.28px; }
+    .cta:hover { background: var(--blueh); }
+    .legal { border-top: 1px solid var(--gray4); margin-top: 28px; padding-top: 14px; font-size: 10.5px; line-height: 1.45; color: var(--gray3); max-width: 495px; }
+
+    /* resumo (mesmo do carrinho) */
+    .sum { background: #F8F8F8; border-left: 1px solid #ececec; }
+    .sum-in { padding: 46px 24px 24px; }
+    .sum-t { font-family: var(--display); font-size: 28px; line-height: 38px; font-weight: 600; color: #000; margin-bottom: 24px; }
+    .s-it { display: flex; gap: 24px; margin-bottom: 24px; }
+    .s-img { position: relative; width: 68px; height: 68px; background: #fff; border: 1px solid var(--gray4); border-radius: 4.3px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+    .s-img img { width: 64px; height: 64px; object-fit: contain; }
+    .s-img .bd { position: absolute; top: -10px; left: 56px; width: 24px; height: 24px; border-radius: 32px; background: #757575; color: #fff; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+    .s-n { flex: 1; font-size: 14px; line-height: 16px; color: #000; }
+    .s-n small { display: block; font-size: 12px; line-height: 14px; color: var(--gray2); margin-top: 4px; }
+    .s-p { font-size: 14px; line-height: 16px; white-space: nowrap; }
+    .cupom { display: flex; gap: 20px; margin: 0 0 24px; }
+    .cupom input { flex: 1; min-width: 0; border: 1px solid #D2D2D7; border-radius: 8px; padding: 16px; font-family: var(--display); font-size: 18px; font-weight: 500; line-height: 18px; }
+    .cupom input::placeholder { color: var(--gray3); }
+    .cupom button { background: var(--gray5); border: 1px solid var(--gray4); border-radius: 8px; padding: 16px 20px; font-family: var(--display); font-size: 18px; font-weight: 500; letter-spacing: .36px; color: var(--gray3); }
+    .totals { display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 20px; margin-bottom: 24px; }
+    .totals div { display: flex; justify-content: space-between; }
+    .grand { display: flex; justify-content: space-between; font-family: var(--display); font-size: 24px; line-height: 28px; font-weight: 600; letter-spacing: .48px; }
+  </style>
+</head>
+
+<body>
+  <header class="top">
+    <a class="logos" href="index.html">
+      <img class="logo" src="https://www.iplace.com.br/file/general/iplace-pay-jornada-071026-logo-iplace-partner.svg" alt="iPlace — Apple Premium Partner">
+    </a>
+    <a href="carrinho.html" aria-label="Voltar ao carrinho">
+      <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M6.5 4.25C6.5 2.93882 7.76806 1.75 9.5 1.75C11.2319 1.75 12.5 2.93882 12.5 4.25H6.5ZM5.5 4.25C5.5 2.24747 7.36595 0.75 9.5 0.75C11.6341 0.75 13.5 2.24747 13.5 4.25H17C18.1046 4.25 19 5.14543 19 6.25V19.25C19 20.3546 18.1046 21.25 17 21.25H2C0.895431 21.25 0 20.3546 0 19.25V6.25C0 5.14543 0.895431 4.25 2 4.25H5.5ZM1 6.25C1 5.69772 1.44772 5.25 2 5.25H17C17.5523 5.25 18 5.69772 18 6.25V19.25C18 19.8023 17.5523 20.25 17 20.25H2C1.44772 20.25 1 19.8023 1 19.25V6.25Z"
+          fill="#0071E3"></path>
+      </svg>
+    </a>
+  </header>
+
+  <div class="co">
+    <main class="co-main">
+      <section class="sec">
+        <div class="sec-h"><span>Conta</span><button class="tog" type="button" aria-label="Expandir">&#8964;</button></div>
+        <div class="email">ryan_duarte@rj.net</div>
+      </section>
+
+      <section class="sec">
+        <div class="sec-h"><span>Selecione o endereço</span><button class="tog" type="button" aria-label="Recolher">&#8963;</button></div>
+        <div style="margin-top:14px" id="addrs">
+          <div class="card on">
+            <span class="rd"></span>
+            <div class="grow"><div class="nm">Casa</div><div class="sm">Praça Santa Luzia, 123, Pinheiros - São Paulo - SP - 05414-110</div></div>
+            <span class="dots">&#8942;</span>
+          </div>
+          <div class="card plain">
+            <span class="rd"></span>
+            <div class="grow"><div class="nm">Casa 2</div><div class="sm">Rua Vinte e Cinco de Julho, 1, Rio Branco - Novo Hamburgo - RS - 93310-251</div></div>
+          </div>
+        </div>
+        <button class="add-addr" type="button"><b>+</b> Adicionar novo endereço</button>
+      </section>
+
+      <section class="sec">
+        <div class="lbl">Forma de entrega</div>
+        <div class="card on">
+          <span class="rd"></span>
+          <div class="grow nm" style="font-weight:400">Receber</div>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 1h9v7H1zM10 3.5h2.8L15 6v2h-5z" stroke="#0071E3" stroke-width="1"/><circle cx="4" cy="9.5" r="1.3" fill="#fff" stroke="#0071E3"/><circle cx="12" cy="9.5" r="1.3" fill="#fff" stroke="#0071E3"/></svg>
+        </div>
+      </section>
+
+      <section class="sec opts" id="opts">
+        <div class="lbl">Seleciona a forma de entrega</div>
+        <div class="card on" data-f="65.56">
+          <span class="rd"></span>
+          <div class="grow"><div class="nm">Expressa</div><div class="sm">Previsão de entrega:<br>até o dia 28 de setembro</div><div class="rec">Recomendado</div></div>
+          <span class="pr">R$ 65,56</span>
+        </div>
+        <div class="card plain" data-f="0">
+          <span class="rd"></span>
+          <div class="grow"><div class="nm">Normal</div><div class="sm">Previsão de entrega:<br>até o dia 29 de setembro</div></div>
+          <span class="pr">GRÁTIS</span>
+        </div>
+      </section>
+
+      <a class="cta" href="pagamento.html">Continuar para o pagamento</a>
+
+      <p class="legal">Preços e condições exclusivos para o site www.iplace.com.br e para o televendas, podendo sofrer alterações sem prévia notificação. iplace.com.br é uma empresa Global Distribuição de Bens de Consumo Ltda, rua Ioneji Matsubayashi, nº 1351, sala 002 / São Paulo - SP / CEP 08260-050 CNPJ 89.237.911/0162-25 / Telefone: 0800 644 2255 ou 4020-2595. iPlace uma empresa do Grupo Herval (CNPJ: 89.237.911/0001-40)</p>
+    </main>
+
+    <aside class="sum">
+      <div class="sum-in">
+        <h2 class="sum-t">Resumo do Pedido</h2>
+        <div id="sumItems"></div>
+        <div class="cupom"><input placeholder="Cupom de desconto"><button type="button">Aplicar</button></div>
+        <div class="totals">
+          <div><span>Subtotal</span><span id="sSub"></span></div>
+          <div><span>Descontos</span><span>R$ 0,00</span></div>
+          <div><span>Frete</span><span id="sFrete"></span></div>
+        </div>
+        <div class="grand"><span>Total</span><span id="sTotal"></span></div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    function brl(v) { return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+    var cart = null;
+    try { cart = JSON.parse(sessionStorage.getItem('ipp_cart')); } catch (e) { }
+    if (!cart || !cart.itens) {
+      cart = { itens: [{ nome: 'iPhone 17 Pro', cor: 'Azul-Intenso', mem: '256GB', preco: 8829, presente: 0,
+        img: 'https://www.iplace.com.br/ccstore/v1/images/?source=/file/v2882254726062931999/products/100072470.00.638931088051031206-iphone-17-pro-512gb-azul-intenso-mg8n4be-a.jpg&height=300&width=300' }], subtotal: 8829 };
+    }
+
+    document.getElementById('sumItems').innerHTML = cart.itens.map(function (it) {
+      return '<div class="s-it"><div class="s-img"><img src="' + it.img + '" alt=""><span class="bd">1</span></div>' +
+        '<div class="s-n">' + it.nome + '<small>Cor: ' + it.cor + '<br>Armazenamento: ' + it.mem + '</small></div><div class="s-p">' + brl(it.preco) + '</div></div>';
+    }).join('');
+
+    document.querySelectorAll('#addrs .card').forEach(function (c) {
+      c.addEventListener('click', function () {
+        document.querySelectorAll('#addrs .card').forEach(function (o) { o.classList.remove('on'); o.classList.add('plain'); });
+        c.classList.add('on'); c.classList.remove('plain');
+      });
+    });
+
+    var frete = 65.56;
+    function totais() {
+      document.getElementById('sSub').textContent = brl(cart.subtotal);
+      document.getElementById('sFrete').textContent = frete ? brl(frete) : 'Grátis';
+      document.getElementById('sTotal').textContent = brl(cart.subtotal + frete);
+      try { sessionStorage.setItem('ipp_frete', String(frete)); } catch (e) { }
+    }
+
+    document.querySelectorAll('#opts .card').forEach(function (c) {
+      c.addEventListener('click', function () {
+        document.querySelectorAll('#opts .card').forEach(function (o) { o.classList.remove('on'); o.classList.add('plain'); });
+        c.classList.add('on'); c.classList.remove('plain');
+        frete = parseFloat(c.dataset.f);
+        totais();
+      });
+    });
+    totais();
+  </script>
+</body>
+
+</html>
